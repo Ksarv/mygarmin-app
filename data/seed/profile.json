@@ -1,0 +1,28 @@
+{
+  "format": "mygarmin-profile-v1",
+  "equipment": [
+    "pullup_bar",
+    "parallel_bars",
+    "bench",
+    "dumbbells",
+    "barbell",
+    "jump_rope",
+    "elliptical",
+    "upper_cable",
+    "lower_cable",
+    "hyperextension_bench",
+    "preacher_bench",
+    "open_space",
+    "plyo_box"
+  ],
+  "weights": {
+    "calisthenics": 3,
+    "familiarity": 2,
+    "preference": 2,
+    "level": 2
+  },
+  "liked": [],
+  "excluded": [],
+  "swaps": {},
+  "notes": ""
+}

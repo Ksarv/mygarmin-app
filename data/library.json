@@ -1,0 +1,2732 @@
+{
+  "format": "mygarmin-library-v1",
+  "note": "Кожна вправа має точний ідентифікатор зі словника Garmin (category/exercise). Перевірено за app/data/garmin_catalog_check.json у тестах.",
+  "equipment": {
+    "pullup_bar": "Турнік",
+    "parallel_bars": "Бруси",
+    "bench": "Лава",
+    "dumbbells": "Гантелі: фіксовані 0,5–10 кг (до 10 кг крок 1 кг), розбірні до 15 кг, гексагональні від 12,5 кг (крок 2,5 кг)",
+    "barbell": "Штанга",
+    "jump_rope": "Скакалка",
+    "elliptical": "Орбітрек",
+    "upper_cable": "Верхній блок (тяга до грудей, канат до обличчя)",
+    "lower_cable": "Нижній блок (тяга сидячи, Паллоф)",
+    "hyperextension_bench": "Лава для гіперекстензії 45°",
+    "preacher_bench": "Лава Скотта з EZ-грифом",
+    "open_space": "Вільне місце 10+ м (човниковий біг)",
+    "plyo_box": "Куб для стрибків"
+  },
+  "dumbbell": {
+    "min_kg": 0.5,
+    "step_kg": 2.5,
+    "weights": [0.5, 1, 2, 2.5, 3, 4, 5, 6, 7, 7.5, 8, 9, 10, 12.5, 15, 17.5, 20, 22.5, 25, 27.5, 30],
+    "note": "Фіксовані 0,5, 1 і 2–10 кг (крок 1 кг), розбірні до 15 кг (крок 2,5 кг), гексагональні від 12,5 кг (крок 2,5 кг)."
+  },
+  "exercises": {
+    "pullup_neg": {
+      "name": "Підтягування: стрибок і повільне опускання",
+      "garmin_name": "Jumping Pull-ups",
+      "garmin": {
+        "category": "PULL_UP",
+        "exercise": "JUMPING_PULL_UPS"
+      },
+      "catalog": "strength",
+      "pattern": "pull_v",
+      "equipment": [
+        "pullup_bar"
+      ],
+      "calisthenics": true,
+      "level": 2,
+      "unit": "reps",
+      "sides": false,
+      "load": "bodyweight",
+      "range": [
+        3,
+        6
+      ],
+      "step": 1,
+      "next": "pullup",
+      "prev": null,
+      "tempo": "опускання 5 с",
+      "scene": "pullup_neg",
+      "guide": {
+        "why": "Ексцентрична сила спини й рук — найшвидший шлях до першого повного підтягування без гуми.",
+        "setup": "Стань під турніком (за потреби — на лаву). Хват трохи ширше плечей, долоні від себе.",
+        "move": "Стрибком вийди у верхню точку: підборіддя над перекладиною, лікті притиснуті. Опускайся рівно 5 с до майже прямих рук.",
+        "finish": "Стань на підлогу, видихни, повтори. Не стрибай униз — кожне опускання контрольоване.",
+        "check": [
+          "Опускання триває 5 с, а не падіння",
+          "Плечі не підтягуються до вух у нижній точці",
+          "Корпус не розгойдується"
+        ],
+        "mistakes": [
+          "Різко «скидати» себе вниз останні 10 см",
+          "Висіти розслабленими плечима при болю"
+        ],
+        "easier": "Опускання 3 с або 1 повторення менше. Якщо плечі болять — заміни на тягу верхнього блока."
+      }
+    },
+    "y_raise": {
+      "name": "Y-підйом рук лежачи на животі",
+      "garmin_name": "Floor Y Raise",
+      "garmin": {
+        "category": "SHOULDER_STABILITY",
+        "exercise": "FLOOR_Y_RAISE"
+      },
+      "catalog": "strength",
+      "pattern": "shoulder_health",
+      "equipment": [],
+      "calisthenics": true,
+      "level": 1,
+      "unit": "reps",
+      "sides": false,
+      "load": "bodyweight",
+      "range": [
+        8,
+        15
+      ],
+      "step": 1,
+      "next": null,
+      "prev": null,
+      "tempo": "2 с утримання вгорі",
+      "scene": "y_raise",
+      "guide": {
+        "why": "Нижня частина трапецієподібного м’яза й лопатки — противага віджиманням і брусам, здорові плечі над головою.",
+        "setup": "Ляж на живіт, руки витягнуті вперед під кутом, як літера «Y», великі пальці вгору. Лоб на рушнику.",
+        "move": "Опусти лопатки вниз і назад, підніми прямі руки на 3–5 см від підлоги.",
+        "finish": "Утримай 2 с і повільно опусти.",
+        "check": [
+          "Шия розслаблена, плечі далеко від вух",
+          "Поперек не прогинається"
+        ],
+        "mistakes": [
+          "Підіймати груди замість рук",
+          "Ривки"
+        ],
+        "easier": "Менша амплітуда або руки зігнуті."
+      }
+    },
+    "pullup": {
+      "name": "Підтягування",
+      "garmin_name": "Pull-up",
+      "garmin": {
+        "category": "PULL_UP",
+        "exercise": "PULL_UP"
+      },
+      "catalog": "strength",
+      "pattern": "pull_v",
+      "equipment": [
+        "pullup_bar"
+      ],
+      "calisthenics": true,
+      "level": 4,
+      "unit": "reps",
+      "sides": false,
+      "load": "bodyweight",
+      "range": [
+        1,
+        8
+      ],
+      "step": 1,
+      "next": null,
+      "prev": "pullup_neg",
+      "scene": "pullup",
+      "guide": {
+        "why": "Базова вертикальна тяга власною вагою.",
+        "setup": "Повний вис, хват трохи ширше плечей, ноги разом, корпус напружений.",
+        "move": "Опусти лопатки й тягни лікті вниз до ребер, доки підборіддя не стане над перекладиною.",
+        "finish": "Опускайся 2–3 с до майже прямих рук.",
+        "check": [
+          "Без ривка ногами",
+          "Підборіддя над перекладиною",
+          "Повний контроль униз"
+        ],
+        "mistakes": [
+          "Кіпінг і розгойдування",
+          "Пів-амплітуди"
+        ],
+        "easier": "Повернись до стрибка й повільного опускання."
+      }
+    },
+    "latpulldown": {
+      "name": "Тяга верхнього блока до грудей",
+      "garmin_name": "Lat Pulldown",
+      "garmin": {
+        "category": "PULL_UP",
+        "exercise": "LAT_PULLDOWN"
+      },
+      "catalog": "strength",
+      "pattern": "pull_v",
+      "equipment": [
+        "upper_cable"
+      ],
+      "calisthenics": false,
+      "level": 1,
+      "unit": "reps",
+      "sides": false,
+      "load": "machine",
+      "range": [
+        8,
+        12
+      ],
+      "step": 1,
+      "load_step": 5,
+      "next": null,
+      "prev": null,
+      "scene": "latpulldown",
+      "guide": {
+        "why": "Набирає об’єм вертикальної тяги, якого поки не дає турнік.",
+        "setup": "Стегна під валиком, широка рукоятка, хват трохи ширше плечей. Груди вгору.",
+        "move": "Тягни рукоятку перед обличчям до верхньої частини грудей, лікті вниз і трохи назад.",
+        "finish": "Повільно відпусти до прямих рук, не дозволяй вазі смикати плечі.",
+        "check": [
+          "Тяга перед обличчям, не за голову",
+          "Корпус майже вертикальний",
+          "Лишається 2 повторення в запасі"
+        ],
+        "mistakes": [
+          "Відкидатися назад усім тілом",
+          "Тягнути руками без лопаток"
+        ],
+        "easier": "−5 кг на блоці."
+      }
+    },
+    "row_db": {
+      "name": "Тяга гантелі однією рукою з опорою на лаву",
+      "garmin_name": "Single-arm Neutral-grip Dumbbell Row",
+      "garmin": {
+        "category": "ROW",
+        "exercise": "SINGLE_ARM_NEUTRAL_GRIP_DUMBBELL_ROW"
+      },
+      "catalog": "strength",
+      "pattern": "pull_h",
+      "equipment": [
+        "dumbbells",
+        "bench"
+      ],
+      "calisthenics": false,
+      "level": 1,
+      "unit": "reps",
+      "sides": true,
+      "load": "one_dumbbell",
+      "range": [
+        8,
+        12
+      ],
+      "step": 1,
+      "load_step": 2.5,
+      "next": null,
+      "prev": null,
+      "scene": "row1",
+      "guide": {
+        "why": "Спина й утримання корпуса без скручування.",
+        "setup": "Коліно й долоня однієї сторони на лаві, друга стопа на підлозі. Спина рівна.",
+        "move": "На видиху веди лікоть уздовж тулуба до таза.",
+        "finish": "Повільно опусти гантель до майже прямої руки, плечі не розвертаються.",
+        "check": [
+          "Таз і плечі паралельні підлозі",
+          "Лікоть іде до таза, не в сторону"
+        ],
+        "mistakes": [
+          "Ривок корпусом",
+          "Плече до вуха"
+        ],
+        "easier": "Мінус 2 повторення на підхід."
+      }
+    },
+    "pushup_incline": {
+      "name": "Віджимання від лави",
+      "garmin_name": "Incline Push-up",
+      "garmin": {
+        "category": "PUSH_UP",
+        "exercise": "INCLINE_PUSH_UP"
+      },
+      "catalog": "strength",
+      "pattern": "push_h",
+      "equipment": [
+        "bench"
+      ],
+      "calisthenics": true,
+      "level": 1,
+      "unit": "reps",
+      "sides": false,
+      "load": "bodyweight",
+      "range": [
+        8,
+        15
+      ],
+      "step": 1,
+      "next": "pushup",
+      "prev": null,
+      "scene": "incline",
+      "guide": {
+        "why": "Легший варіант віджимань для розминки та накопичення об’єму.",
+        "setup": "Долоні на краю стійкої лави, тіло одна лінія від голови до п’ят.",
+        "move": "Зігни лікті під кутом 30–60° до тулуба, груди до краю лави.",
+        "finish": "Відштовхнись до прямих рук, не провалюючи таз.",
+        "check": [
+          "Таз не провисає",
+          "Лава не ковзає"
+        ],
+        "mistakes": [
+          "Лікті строго в сторони"
+        ],
+        "easier": "Вища опора (стіл, підвіконня)."
+      }
+    },
+    "pushup": {
+      "name": "Віджимання від підлоги",
+      "garmin_name": "Push-up",
+      "garmin": {
+        "category": "PUSH_UP",
+        "exercise": "PUSH_UP"
+      },
+      "catalog": "strength",
+      "pattern": "push_h",
+      "equipment": [],
+      "calisthenics": true,
+      "level": 2,
+      "unit": "reps",
+      "sides": false,
+      "load": "bodyweight",
+      "range": [
+        6,
+        15
+      ],
+      "step": 1,
+      "next": "pushup_decline",
+      "prev": "pushup_incline",
+      "scene": "pushup",
+      "guide": {
+        "why": "Груди, трицепси, плечі й корпус як одна система.",
+        "setup": "Долоні трохи ширше плечей, стопи разом або на ширині таза, сідниці напружені.",
+        "move": "Опускай тіло єдиною лінією, лікті 30–60° до тулуба, груди майже торкаються підлоги.",
+        "finish": "Відштовхнись до прямих рук, лопатки трохи розводяться.",
+        "check": [
+          "Таз не провисає й не стирчить",
+          "Повна амплітуда"
+        ],
+        "mistakes": [
+          "Завалювати поперек",
+          "Голова тягнеться вперед"
+        ],
+        "easier": "Віджимання від лави."
+      }
+    },
+    "pushup_decline": {
+      "name": "Віджимання з ногами на лаві",
+      "garmin_name": "Decline Push-up",
+      "garmin": {
+        "category": "PUSH_UP",
+        "exercise": "DECLINE_PUSH_UP"
+      },
+      "catalog": "strength",
+      "pattern": "push_h",
+      "equipment": [
+        "bench"
+      ],
+      "calisthenics": true,
+      "level": 3,
+      "unit": "reps",
+      "sides": false,
+      "load": "bodyweight",
+      "range": [
+        6,
+        15
+      ],
+      "step": 1,
+      "next": null,
+      "prev": "pushup",
+      "scene": "pushup_decline",
+      "guide": {
+        "why": "Більше навантаження на плечі й верх грудей без обтяження.",
+        "setup": "Стопи на лаві, долоні на підлозі трохи ширше плечей.",
+        "move": "Опускайся єдиною лінією, не прогинаючи поперек.",
+        "finish": "Відштовхнись до прямих рук.",
+        "check": [
+          "Корпус рівний",
+          "Плечі без болю"
+        ],
+        "mistakes": [
+          "Провисання таза"
+        ],
+        "easier": "Звичайні віджимання від підлоги."
+      }
+    },
+    "dip_neg": {
+      "name": "Бруси: повільне опускання",
+      "garmin_name": "Body Weight Dip",
+      "garmin": {
+        "category": "TRICEPS_EXTENSION",
+        "exercise": "BODY_WEIGHT_DIP"
+      },
+      "catalog": "strength",
+      "pattern": "push_dip",
+      "equipment": [
+        "parallel_bars"
+      ],
+      "calisthenics": true,
+      "level": 2,
+      "unit": "reps",
+      "sides": false,
+      "load": "bodyweight",
+      "range": [
+        3,
+        6
+      ],
+      "step": 1,
+      "next": "dip",
+      "prev": null,
+      "tempo": "опускання 4 с",
+      "scene": "dip_neg",
+      "guide": {
+        "why": "Сила жиму власною вагою; готує до повних віджимань на брусах.",
+        "setup": "Вийди в упор на прямих руках (стрибком або з лави). Плечі опущені, ноги зігнуті позаду.",
+        "move": "Опускайся 4 с, лікті назад, доки плече не стане приблизно паралельно підлозі або до комфортної глибини.",
+        "finish": "Стань на підлогу й знову вийди в упор. Вгору поки не жми.",
+        "check": [
+          "Плечі не піднімаються до вух",
+          "Без болю спереду плеча",
+          "Опускання рівномірне"
+        ],
+        "mistakes": [
+          "Глибше, ніж дозволяють плечі",
+          "Падіння в нижній точці"
+        ],
+        "easier": "Лише утримання упору 10–20 с або мілкіше опускання."
+      }
+    },
+    "dip": {
+      "name": "Віджимання на брусах",
+      "garmin_name": "Body Weight Dip",
+      "garmin": {
+        "category": "TRICEPS_EXTENSION",
+        "exercise": "BODY_WEIGHT_DIP"
+      },
+      "catalog": "strength",
+      "pattern": "push_dip",
+      "equipment": [
+        "parallel_bars"
+      ],
+      "calisthenics": true,
+      "level": 3,
+      "unit": "reps",
+      "sides": false,
+      "load": "bodyweight",
+      "range": [
+        3,
+        12
+      ],
+      "step": 1,
+      "next": null,
+      "prev": "dip_neg",
+      "scene": "dip",
+      "guide": {
+        "why": "Повний жим власною вагою.",
+        "setup": "Упор на прямих руках, плечі опущені.",
+        "move": "Опускайся до комфортної глибини, лікті назад.",
+        "finish": "Вичави себе вгору до прямих рук.",
+        "check": [
+          "Плечі без болю",
+          "Без ривків"
+        ],
+        "mistakes": [
+          "Надто глибоко",
+          "Розгойдування ногами"
+        ],
+        "easier": "Повернись до повільного опускання."
+      }
+    },
+    "pike_pushup": {
+      "name": "Віджимання «пайк» (на плечі)",
+      "garmin_name": "Pike Push-up",
+      "garmin": {
+        "category": "PUSH_UP",
+        "exercise": "PIKE_PUSH_UP"
+      },
+      "catalog": "strength",
+      "pattern": "push_v",
+      "equipment": [],
+      "calisthenics": true,
+      "level": 2,
+      "unit": "reps",
+      "sides": false,
+      "load": "bodyweight",
+      "range": [
+        5,
+        12
+      ],
+      "step": 1,
+      "next": null,
+      "prev": null,
+      "scene": "pike_pushup",
+      "guide": {
+        "why": "Жим над головою власною вагою — плечі для сноуборду, танців і стійки на руках у майбутньому.",
+        "setup": "З упору лежачи підніми таз угору — тіло у формі перевернутої «V». Долоні на ширині плечей.",
+        "move": "Зігни лікті й опусти верх голови до точки перед долонями.",
+        "finish": "Відштовхнись назад до прямих рук, таз залишається високо.",
+        "check": [
+          "Таз високо весь підхід",
+          "Лікті не розходяться строго в сторони"
+        ],
+        "mistakes": [
+          "Перетворити рух на звичайне віджимання",
+          "Вдаритися головою"
+        ],
+        "easier": "Менша амплітуда або руки на лаві."
+      }
+    },
+    "goblet": {
+      "name": "Гоблет-присідання",
+      "garmin_name": "Goblet Squat",
+      "garmin": {
+        "category": "SQUAT",
+        "exercise": "GOBLET_SQUAT"
+      },
+      "catalog": "strength",
+      "pattern": "squat",
+      "equipment": [
+        "dumbbells"
+      ],
+      "calisthenics": false,
+      "level": 1,
+      "unit": "reps",
+      "sides": false,
+      "load": "one_dumbbell",
+      "range": [
+        8,
+        12
+      ],
+      "step": 1,
+      "load_step": 2.5,
+      "next": null,
+      "prev": null,
+      "scene": "goblet",
+      "guide": {
+        "why": "Сила ніг і глибокий присід із рівною спиною.",
+        "setup": "Одна гантель вертикально біля грудей, стопи трохи ширше плечей.",
+        "move": "Опускай таз між стопами, коліна йдуть у напрямку носків.",
+        "finish": "Встань, відштовхуючись усією стопою.",
+        "check": [
+          "П’яти на підлозі",
+          "Спина рівна",
+          "2 повторення в запасі"
+        ],
+        "mistakes": [
+          "Коліна всередину",
+          "Гантель відходить від грудей"
+        ],
+        "easier": "−2,5 кг або присідання без ваги."
+      }
+    },
+    "squat_bw": {
+      "name": "Присідання без ваги",
+      "garmin_name": "Squat",
+      "garmin": {
+        "category": "SQUAT",
+        "exercise": "SQUAT"
+      },
+      "catalog": "strength",
+      "pattern": "squat",
+      "equipment": [],
+      "calisthenics": true,
+      "level": 1,
+      "unit": "reps",
+      "sides": false,
+      "load": "bodyweight",
+      "range": [
+        10,
+        20
+      ],
+      "step": 2,
+      "next": null,
+      "prev": null,
+      "scene": "air_squat",
+      "guide": {
+        "why": "Розминка колін, кульшових і гомілкостопів.",
+        "setup": "Стопи на ширині плечей.",
+        "move": "Плавно присідай у комфортну глибину.",
+        "finish": "Встань, не відриваючи п’ят.",
+        "check": [
+          "Коліна в напрямку носків"
+        ],
+        "mistakes": [
+          "Поспіх"
+        ],
+        "easier": "Менша глибина."
+      }
+    },
+    "rev_lunge_offset": {
+      "name": "Випад назад із гантеллю в одній руці",
+      "garmin_name": "Offset Dumbbell Reverse Lunge",
+      "garmin": {
+        "category": "LUNGE",
+        "exercise": "OFFSET_DUMBBELL_REVERSE_LUNGE"
+      },
+      "catalog": "strength",
+      "pattern": "lunge",
+      "equipment": [
+        "dumbbells"
+      ],
+      "calisthenics": false,
+      "level": 2,
+      "unit": "reps",
+      "sides": true,
+      "load": "one_dumbbell",
+      "range": [
+        6,
+        10
+      ],
+      "step": 1,
+      "load_step": 2.5,
+      "next": null,
+      "prev": null,
+      "scene": "reverse",
+      "guide": {
+        "why": "Сила однієї ноги та бічна стабільність корпуса — база для бігу, сноуборду й танців.",
+        "setup": "Гантель в одній руці збоку, стопи на ширині таза. Гантель у руці з боку ноги, що крокує назад.",
+        "move": "Крок назад, опусти заднє коліно майже до підлоги. Корпус не нахиляється в бік гантелі.",
+        "finish": "Відштовхнись передньою п’ятою й повернись у стійку. Спершу всі повторення однієї ноги, потім зміни руку й ногу.",
+        "check": [
+          "Переднє коліно над стопою",
+          "Плечі рівні",
+          "Таз не розвертається"
+        ],
+        "mistakes": [
+          "Короткий крок — коліно далеко за носок",
+          "Нахил у бік гантелі"
+        ],
+        "easier": "Без гантелі."
+      }
+    },
+    "split_squat_db": {
+      "name": "Болгарський присід із гантелями",
+      "garmin_name": "Dumbbell Bulgarian Split Squat",
+      "garmin": {
+        "category": "LUNGE",
+        "exercise": "DUMBBELL_BULGARIAN_SPLIT_SQUAT"
+      },
+      "catalog": "strength",
+      "pattern": "lunge",
+      "equipment": [
+        "dumbbells",
+        "bench"
+      ],
+      "calisthenics": false,
+      "level": 3,
+      "unit": "reps",
+      "sides": true,
+      "load": "each_dumbbell",
+      "range": [
+        6,
+        10
+      ],
+      "step": 1,
+      "load_step": 2.5,
+      "next": null,
+      "prev": null,
+      "scene": "split_squat",
+      "guide": {
+        "why": "Важкий варіант роботи на одній нозі.",
+        "setup": "Задня стопа на лаві, гантелі в опущених руках.",
+        "move": "Опускай таз униз, переднє коліно над стопою.",
+        "finish": "Відштовхнись передньою п’ятою.",
+        "check": [
+          "Рівновага без хитання"
+        ],
+        "mistakes": [
+          "Надто близько до лави"
+        ],
+        "easier": "Випад назад."
+      }
+    },
+    "side_lunge": {
+      "name": "Бічний випад",
+      "garmin_name": "Side Lunge",
+      "garmin": {
+        "category": "LUNGE",
+        "exercise": "SIDE_LUNGE"
+      },
+      "catalog": "strength",
+      "pattern": "lunge_lateral",
+      "equipment": [],
+      "calisthenics": true,
+      "level": 1,
+      "unit": "reps",
+      "sides": true,
+      "load": "bodyweight",
+      "range": [
+        6,
+        12
+      ],
+      "step": 1,
+      "next": null,
+      "prev": null,
+      "scene": "native_wide_side_lunge",
+      "guide": {
+        "why": "Бічна сила й рухливість привідних м’язів — сноуборд, танці, зміна напрямку.",
+        "setup": "Широка стійка, носки трохи назовні.",
+        "move": "Відведи таз назад і вбік, згинаючи одне коліно; друга нога пряма, стопа на підлозі.",
+        "finish": "Відштовхнись і повернись у центр. Спершу всі повтори в один бік.",
+        "check": [
+          "П’ята зігнутої ноги на підлозі",
+          "Коліно над стопою"
+        ],
+        "mistakes": [
+          "Округлити спину",
+          "Коліно всередину"
+        ],
+        "easier": "Менша глибина, руки на опорі."
+      }
+    },
+    "sl_rdl": {
+      "name": "Румунська тяга на одній нозі з гантеллю",
+      "garmin_name": "Single-leg Romanian Deadlift with Dumbbell",
+      "garmin": {
+        "category": "DEADLIFT",
+        "exercise": "SINGLE_LEG_ROMANIAN_DEADLIFT_WITH_DUMBBELL"
+      },
+      "catalog": "strength",
+      "pattern": "hinge",
+      "equipment": [
+        "dumbbells"
+      ],
+      "calisthenics": false,
+      "level": 2,
+      "unit": "reps",
+      "sides": true,
+      "load": "one_dumbbell",
+      "range": [
+        6,
+        10
+      ],
+      "step": 1,
+      "load_step": 2.5,
+      "next": null,
+      "prev": null,
+      "scene": "sl_rdl",
+      "guide": {
+        "why": "Задня поверхня стегна, сідниці й баланс на одній нозі.",
+        "setup": "Стій на одній нозі, коліно м’яке. Гантель у протилежній руці.",
+        "move": "Нахиляйся від таза вперед, вільна нога йде назад в одну лінію з корпусом. Гантель опускається біля гомілки.",
+        "finish": "Повернись угору, стискаючи сідницю опорної ноги. Спершу всі повтори на одній нозі.",
+        "check": [
+          "Таз не розвертається вбік",
+          "Спина рівна",
+          "Вільна нога продовжує лінію корпуса"
+        ],
+        "mistakes": [
+          "Згинатися спиною замість таза",
+          "Поспіх і втрата рівноваги"
+        ],
+        "easier": "Кінчики пальців вільної ноги торкаються підлоги позаду."
+      }
+    },
+    "rdl": {
+      "name": "Румунська тяга з гантелями",
+      "garmin_name": "Romanian Deadlift",
+      "garmin": {
+        "category": "DEADLIFT",
+        "exercise": "ROMANIAN_DEADLIFT"
+      },
+      "catalog": "strength",
+      "pattern": "hinge",
+      "equipment": [
+        "dumbbells"
+      ],
+      "calisthenics": false,
+      "level": 1,
+      "unit": "reps",
+      "sides": false,
+      "load": "each_dumbbell",
+      "range": [
+        8,
+        12
+      ],
+      "step": 1,
+      "load_step": 2.5,
+      "next": null,
+      "prev": null,
+      "scene": "deadlift",
+      "guide": {
+        "why": "Задня поверхня стегна та сідниці.",
+        "setup": "Гантелі перед стегнами, стопи на ширині таза.",
+        "move": "Відведи таз назад, гантелі ковзають уздовж ніг, спина рівна.",
+        "finish": "Встань, стиснувши сідниці.",
+        "check": [
+          "Спина рівна",
+          "Гантелі близько до ніг"
+        ],
+        "mistakes": [
+          "Згинати коліна як у присіді"
+        ],
+        "easier": "Менша амплітуда."
+      }
+    },
+    "sl_hip_raise": {
+      "name": "Сідничний міст на одній нозі",
+      "garmin_name": "Single-leg Hip Raise",
+      "garmin": {
+        "category": "HIP_RAISE",
+        "exercise": "SINGLE_LEG_HIP_RAISE"
+      },
+      "catalog": "strength",
+      "pattern": "hinge",
+      "equipment": [],
+      "calisthenics": true,
+      "level": 2,
+      "unit": "reps",
+      "sides": true,
+      "load": "bodyweight",
+      "range": [
+        8,
+        15
+      ],
+      "step": 1,
+      "next": null,
+      "prev": "hip_raise",
+      "scene": "sl_bridge",
+      "guide": {
+        "why": "Сідниці по одній стороні — стабільність таза під час бігу.",
+        "setup": "Лежачи на спині, одна стопа на підлозі, друга нога випрямлена.",
+        "move": "Підніми таз, відштовхуючись п’ятою опорної ноги; таз не перекошується.",
+        "finish": "Затримайся 1 с угорі, повільно опусти.",
+        "check": [
+          "Таз рівний",
+          "Поперек не прогинається"
+        ],
+        "mistakes": [
+          "Відштовхуватися плечима"
+        ],
+        "easier": "Сідничний міст на двох ногах."
+      }
+    },
+    "hip_raise": {
+      "name": "Сідничний міст",
+      "garmin_name": "Hip Raise",
+      "garmin": {
+        "category": "HIP_RAISE",
+        "exercise": "HIP_RAISE"
+      },
+      "catalog": "strength",
+      "pattern": "hinge",
+      "equipment": [],
+      "calisthenics": true,
+      "level": 1,
+      "unit": "reps",
+      "sides": false,
+      "load": "bodyweight",
+      "range": [
+        10,
+        20
+      ],
+      "step": 2,
+      "next": "sl_hip_raise",
+      "prev": null,
+      "scene": "bridge",
+      "guide": {
+        "why": "Сідниці та розгинання таза.",
+        "setup": "Лежачи на спині, стопи на підлозі.",
+        "move": "Підніми таз до прямої лінії від колін до плечей.",
+        "finish": "Повільно опусти.",
+        "check": [
+          "Поперек не прогинається"
+        ],
+        "mistakes": [
+          "Відштовхуватися носками"
+        ],
+        "easier": "Менша амплітуда."
+      }
+    },
+    "calf_sl": {
+      "name": "Підйом на носок на одній нозі",
+      "garmin_name": "Single-leg Standing Calf Raise",
+      "garmin": {
+        "category": "CALF_RAISE",
+        "exercise": "SINGLE_LEG_STANDING_CALF_RAISE"
+      },
+      "catalog": "strength",
+      "pattern": "calf",
+      "equipment": [],
+      "calisthenics": true,
+      "level": 1,
+      "unit": "reps",
+      "sides": true,
+      "load": "bodyweight",
+      "range": [
+        10,
+        20
+      ],
+      "step": 2,
+      "next": null,
+      "prev": null,
+      "tempo": "1 с угору, 2 с униз",
+      "scene": "calf_sl",
+      "guide": {
+        "why": "Литки й ахіллове сухожилля — підготовка гомілкостопів до бігу та скакалки.",
+        "setup": "Стань на одну ногу, кінчиками пальців тримайся за стіну чи стійку.",
+        "move": "Підніми п’яту якомога вище, вага на великому пальці.",
+        "finish": "Опускай 2 с до підлоги. Спершу всі повтори однією ногою.",
+        "check": [
+          "Щиколотка не завалюється назовні",
+          "Повна амплітуда"
+        ],
+        "mistakes": [
+          "Пружинити без контролю"
+        ],
+        "easier": "На двох ногах."
+      }
+    },
+    "hanging_knee_raise": {
+      "name": "Підйом колін у висі",
+      "garmin_name": "Hanging Knee Raise",
+      "garmin": {
+        "category": "LEG_RAISE",
+        "exercise": "HANGING_KNEE_RAISE"
+      },
+      "catalog": "strength",
+      "pattern": "core_flex",
+      "equipment": [
+        "pullup_bar"
+      ],
+      "calisthenics": true,
+      "level": 2,
+      "unit": "reps",
+      "sides": false,
+      "load": "bodyweight",
+      "range": [
+        5,
+        12
+      ],
+      "step": 1,
+      "next": null,
+      "prev": null,
+      "scene": "hanging_knee_raise",
+      "guide": {
+        "why": "Прес і хват; плюс час у висі для майбутніх підтягувань.",
+        "setup": "Вис на турніку, плечі трохи опущені, ноги разом.",
+        "move": "Підніми коліна до рівня таза, трохи підкручуючи таз.",
+        "finish": "Опускай ноги 2 с без розгойдування.",
+        "check": [
+          "Корпус не розгойдується",
+          "Плечі активні"
+        ],
+        "mistakes": [
+          "Закидати ноги махом"
+        ],
+        "easier": "Менша висота колін або «мертвий жук»."
+      }
+    },
+    "deadbug": {
+      "name": "Мертвий жук",
+      "garmin_name": "Dead Bug",
+      "garmin": {
+        "category": "HIP_STABILITY",
+        "exercise": "DEAD_BUG"
+      },
+      "catalog": "strength",
+      "pattern": "core_anti_ext",
+      "equipment": [],
+      "calisthenics": true,
+      "level": 1,
+      "unit": "reps",
+      "sides": true,
+      "load": "bodyweight",
+      "range": [
+        6,
+        12
+      ],
+      "step": 1,
+      "next": null,
+      "prev": null,
+      "scene": "deadbug",
+      "guide": {
+        "why": "Контроль корпуса й координація протилежних рук і ніг.",
+        "setup": "Лежачи на спині, руки вгору, коліна над тазом під 90°.",
+        "move": "Повільно опусти протилежні руку й ногу, поперек притиснутий.",
+        "finish": "Повернись і зміни сторону.",
+        "check": [
+          "Поперек не відривається"
+        ],
+        "mistakes": [
+          "Поспіх"
+        ],
+        "easier": "Рухай лише ногою."
+      }
+    },
+    "side_plank": {
+      "name": "Бічна планка",
+      "garmin_name": "Side Plank",
+      "garmin": {
+        "category": "PLANK",
+        "exercise": "SIDE_PLANK"
+      },
+      "catalog": "strength",
+      "pattern": "core_lat",
+      "equipment": [],
+      "calisthenics": true,
+      "level": 1,
+      "unit": "seconds",
+      "sides": true,
+      "load": "bodyweight",
+      "range": [
+        20,
+        45
+      ],
+      "step": 5,
+      "next": null,
+      "prev": null,
+      "scene": "sideplank",
+      "guide": {
+        "why": "Бічні м’язи корпуса — стабільність при поворотах і приземленнях.",
+        "setup": "Лікоть під плечем, ноги прямі одна на одній (легше — коліна зігнуті).",
+        "move": "Підніми таз, тіло в одну лінію.",
+        "finish": "Тримай заданий час, потім інший бік.",
+        "check": [
+          "Таз не провисає"
+        ],
+        "mistakes": [
+          "Плече до вуха"
+        ],
+        "easier": "З колін."
+      }
+    },
+    "pallof": {
+      "name": "Жим Паллофа на блоці",
+      "garmin_name": "Cable Core Press",
+      "garmin": {
+        "category": "CORE",
+        "exercise": "CABLE_CORE_PRESS"
+      },
+      "catalog": "strength",
+      "pattern": "core_anti_rot",
+      "equipment": [
+        "lower_cable"
+      ],
+      "calisthenics": false,
+      "level": 1,
+      "unit": "reps",
+      "sides": true,
+      "load": "machine",
+      "range": [
+        8,
+        12
+      ],
+      "step": 1,
+      "load_step": 5,
+      "next": null,
+      "prev": null,
+      "tempo": "2 с утримання на прямих руках",
+      "scene": "pallof",
+      "guide": {
+        "why": "Протидія скручуванню — стабільність корпуса на сноуборді й у танцях.",
+        "setup": "Потрібен блок на рівні грудей. На тренажері залу такого немає — найближче: нижній блок з одинарною рукояттю, стань на коліно боком до блока на 1–1,5 м, щоб трос ішов майже горизонтально.",
+        "move": "Вижми рукоятку від грудей уперед, не дозволяючи корпусу повернутися до блока.",
+        "finish": "Утримай 2 с і поверни до грудей. Потім інший бік.",
+        "check": [
+          "Плечі й таз дивляться вперед",
+          "Дихання вільне"
+        ],
+        "mistakes": [
+          "Завелика вага — корпус крутить"
+        ],
+        "easier": "−5 кг або ближче до блока."
+      }
+    },
+    "bird_dog": {
+      "name": "«Пташка-собака»",
+      "garmin_name": "Opposite Arm and Leg Balance",
+      "garmin": {
+        "category": "WARM_UP",
+        "exercise": "OPPOSITE_ARM_AND_LEG_BALANCE"
+      },
+      "catalog": "strength",
+      "pattern": "core_anti_ext",
+      "equipment": [],
+      "calisthenics": true,
+      "level": 1,
+      "unit": "reps",
+      "sides": true,
+      "load": "bodyweight",
+      "range": [
+        6,
+        10
+      ],
+      "step": 1,
+      "next": null,
+      "prev": null,
+      "tempo": "2 с утримання",
+      "scene": "birddog",
+      "guide": {
+        "why": "Координація протилежних кінцівок і контроль попереку.",
+        "setup": "Упор на долонях і колінах.",
+        "move": "Витягни протилежні руку й ногу в одну лінію, утримай 2 с.",
+        "finish": "Поверни й зміни сторону.",
+        "check": [
+          "Таз не нахиляється"
+        ],
+        "mistakes": [
+          "Задирати ногу вище корпуса"
+        ],
+        "easier": "Лише нога."
+      }
+    },
+    "bear_crawl": {
+      "name": "Ведмежа хода",
+      "garmin_name": "Bear Crawl",
+      "garmin": {
+        "category": "PLANK",
+        "exercise": "BEAR_CRAWL"
+      },
+      "catalog": "strength",
+      "pattern": "coordination",
+      "equipment": [],
+      "calisthenics": true,
+      "level": 2,
+      "unit": "seconds",
+      "sides": false,
+      "load": "bodyweight",
+      "range": [
+        15,
+        40
+      ],
+      "step": 5,
+      "next": null,
+      "prev": null,
+      "scene": "bear_crawl",
+      "guide": {
+        "why": "Координація всього тіла, плечі й корпус.",
+        "setup": "Упор на долонях і носках, коліна на 3–5 см над підлогою під тазом.",
+        "move": "Маленькі кроки вперед і назад: права рука з лівою ногою, потім навпаки.",
+        "finish": "Таз не піднімається, спина рівна весь час.",
+        "check": [
+          "Коліна низько",
+          "Протилежні рука й нога рухаються разом"
+        ],
+        "mistakes": [
+          "Таз угору"
+        ],
+        "easier": "Утримання позиції без кроків."
+      }
+    },
+    "jump_rope": {
+      "name": "Скакалка",
+      "garmin_name": "Jump Rope",
+      "garmin": {
+        "category": "CARDIO",
+        "exercise": "JUMP_ROPE"
+      },
+      "catalog": "strength",
+      "pattern": "plyo",
+      "equipment": [
+        "jump_rope"
+      ],
+      "calisthenics": true,
+      "level": 1,
+      "unit": "seconds",
+      "sides": false,
+      "load": "bodyweight",
+      "range": [
+        30,
+        60
+      ],
+      "step": 10,
+      "next": null,
+      "prev": null,
+      "scene": "rope",
+      "guide": {
+        "why": "Ритм, координація і пружність гомілкостопів — для бігу та танців.",
+        "setup": "Лікті біля тулуба, скакалку обертають кисті.",
+        "move": "Низькі м’які підскоки на передній частині стопи, 2–3 см від підлоги.",
+        "finish": "Якщо збився — спокійно продовж, рахуй лише час.",
+        "check": [
+          "Тихе приземлення",
+          "Коліна м’які"
+        ],
+        "mistakes": [
+          "Високі стрибки",
+          "Махати руками"
+        ],
+        "easier": "Імітація без скакалки."
+      }
+    },
+    "lateral_hop": {
+      "name": "Бічний стрибок «ковзаняр»",
+      "garmin_name": "Lateral Leap and Hop",
+      "garmin": {
+        "category": "PLYO",
+        "exercise": "LATERAL_LEAP_AND_HOP"
+      },
+      "catalog": "strength",
+      "pattern": "plyo",
+      "equipment": [],
+      "calisthenics": true,
+      "level": 2,
+      "unit": "reps",
+      "sides": true,
+      "load": "bodyweight",
+      "range": [
+        4,
+        8
+      ],
+      "step": 1,
+      "next": null,
+      "prev": null,
+      "tempo": "приземлення з утриманням 2 с",
+      "scene": "lateral_hop",
+      "guide": {
+        "why": "Бічна потужність і стабільне приземлення — сноуборд, танці, зміна напрямку.",
+        "setup": "Стань на одну ногу, коліно м’яке.",
+        "move": "Відштовхнись убік і м’яко приземлись на іншу ногу.",
+        "finish": "Утримай рівновагу 2 с, потім стрибок назад. «Кожна сторона» — стрибки в один бік.",
+        "check": [
+          "Тихе приземлення",
+          "Коліно над стопою"
+        ],
+        "mistakes": [
+          "Далеко, але без контролю"
+        ],
+        "easier": "Короткий крок замість стрибка."
+      }
+    },
+    "high_knees": {
+      "name": "Ходьба на місці з високим підніманням колін",
+      "garmin_name": "Walking High Knees",
+      "garmin": {
+        "category": "WARM_UP",
+        "exercise": "WALKING_HIGH_KNEES"
+      },
+      "catalog": "strength",
+      "pattern": "warmup",
+      "equipment": [],
+      "calisthenics": true,
+      "level": 1,
+      "unit": "seconds",
+      "sides": false,
+      "load": "bodyweight",
+      "range": [
+        45,
+        90
+      ],
+      "step": 15,
+      "next": null,
+      "prev": null,
+      "scene": "native_walking_high_knees",
+      "guide": {
+        "why": "Підняти пульс і температуру м’язів.",
+        "setup": "Стійка рівно.",
+        "move": "Почергово піднімай коліна до рівня таза, руки працюють.",
+        "finish": "Поступово прискорюйся.",
+        "check": [
+          "Корпус рівний"
+        ],
+        "mistakes": [
+          "Нахил корпусу назад",
+          "Удар п’ятою об підлогу — ставай на передню частину стопи"
+        ],
+        "easier": "Нижче коліна."
+      }
+    },
+    "knee_hugs": {
+      "name": "Підтягування коліна до грудей на ходу",
+      "garmin_name": "Walking Knee Hugs",
+      "garmin": {
+        "category": "WARM_UP",
+        "exercise": "WALKING_KNEE_HUGS"
+      },
+      "catalog": "strength",
+      "pattern": "warmup",
+      "equipment": [],
+      "calisthenics": true,
+      "level": 1,
+      "unit": "seconds",
+      "sides": false,
+      "load": "bodyweight",
+      "range": [
+        45,
+        90
+      ],
+      "step": 15,
+      "next": null,
+      "prev": null,
+      "scene": "native_walking_knee_hugs",
+      "guide": {
+        "why": "Розігрів сідниць і баланс.",
+        "setup": "Стійка.",
+        "move": "Підтягни коліно руками до грудей на 1 с, зміни ногу.",
+        "finish": "Можна на місці.",
+        "check": [
+          "Опорна нога пряма"
+        ],
+        "mistakes": [
+          "Округлювати спину, тягнучись до коліна",
+          "Хитатися на опорній нозі — дивись у точку попереду"
+        ],
+        "easier": "Тримайся за опору."
+      }
+    },
+    "cat_cow_w": {
+      "name": "Кішка-корова",
+      "garmin_name": "Cat Cow Stretch",
+      "garmin": {
+        "category": "WARM_UP",
+        "exercise": "STRETCH_CAT_COW"
+      },
+      "catalog": "strength",
+      "pattern": "warmup",
+      "equipment": [],
+      "calisthenics": true,
+      "level": 1,
+      "unit": "seconds",
+      "sides": false,
+      "load": "bodyweight",
+      "range": [
+        30,
+        60
+      ],
+      "step": 15,
+      "next": null,
+      "prev": null,
+      "scene": "cat",
+      "guide": {
+        "why": "Рухливість хребта.",
+        "setup": "Упор на долонях і колінах.",
+        "move": "Плавно округли спину, потім м’яко прогнись.",
+        "finish": "Рухайся з диханням.",
+        "check": [
+          "Без болю"
+        ],
+        "mistakes": [
+          "Крайні положення силою"
+        ],
+        "easier": "Менша амплітуда."
+      }
+    },
+    "shoulder_circles": {
+      "name": "Кола плечима",
+      "garmin_name": "Shoulder Circles",
+      "garmin": {
+        "category": "WARM_UP",
+        "exercise": "SHOULDER_CIRCLES"
+      },
+      "catalog": "strength",
+      "pattern": "warmup",
+      "equipment": [],
+      "calisthenics": true,
+      "level": 1,
+      "unit": "seconds",
+      "sides": false,
+      "load": "bodyweight",
+      "range": [
+        20,
+        45
+      ],
+      "step": 5,
+      "next": null,
+      "prev": null,
+      "scene": "shoulder_circles",
+      "guide": {
+        "why": "Розігрів плечових суглобів перед тягами й жимами.",
+        "setup": "Стань рівно, руки вільно вздовж тіла, шия довга.",
+        "move": "Повільно підніми плечі до вух, відведи їх назад, опусти вниз і повернись уперед — велике плавне коло.",
+        "finish": "Половину часу — кола назад, половину — вперед.",
+        "check": [
+          "Руки розслаблені, рухаються лише плечі",
+          "Дихання спокійне"
+        ],
+        "mistakes": [
+          "Швидкі ривки",
+          "Голова висувається вперед"
+        ],
+        "easier": "Менші кола."
+      }
+    },
+    "thoracic_rot": {
+      "name": "Розворот грудного відділу з упору",
+      "garmin_name": "Thoracic Rotation",
+      "garmin": {
+        "category": "WARM_UP",
+        "exercise": "THORACIC_ROTATION"
+      },
+      "catalog": "strength",
+      "pattern": "warmup",
+      "equipment": [],
+      "calisthenics": true,
+      "level": 1,
+      "unit": "reps",
+      "sides": true,
+      "load": "bodyweight",
+      "range": [
+        5,
+        10
+      ],
+      "step": 1,
+      "next": null,
+      "prev": null,
+      "scene": "thoracic",
+      "guide": {
+        "why": "Поворот грудного відділу — плечі над головою, скручування в танцях і на дошці.",
+        "setup": "Упор на долонях і колінах, одна рука біля скроні.",
+        "move": "Розверни груди, ведучи лікоть угору.",
+        "finish": "Повільно поверни.",
+        "check": [
+          "Таз нерухомий"
+        ],
+        "mistakes": [
+          "Крутити попереком"
+        ],
+        "easier": "Менша амплітуда."
+      }
+    },
+    "ankle_circles": {
+      "name": "Кола стопою",
+      "garmin_name": "Ankle Circles",
+      "garmin": {
+        "category": "WARM_UP",
+        "exercise": "ANKLE_CIRCLES"
+      },
+      "catalog": "strength",
+      "pattern": "warmup",
+      "equipment": [],
+      "calisthenics": true,
+      "level": 1,
+      "unit": "seconds",
+      "sides": true,
+      "load": "bodyweight",
+      "range": [
+        20,
+        40
+      ],
+      "step": 5,
+      "next": null,
+      "prev": null,
+      "scene": "native_ankle_circles",
+      "guide": {
+        "why": "Розігрів гомілкостопів перед стрибками.",
+        "setup": "Сядь на лаву або стань з опорою рукою на стіну, одну стопу трохи підніми.",
+        "move": "Описуй носком великі повільні кола: до себе, назовні, від себе, всередину.",
+        "finish": "Половину часу — в один бік, половину — в інший, потім друга нога.",
+        "check": [
+          "Рухається гомілковостопний суглоб, гомілка нерухома",
+          "Амплітуда без болю"
+        ],
+        "mistakes": [
+          "Крутити всією ногою від коліна",
+          "Поспіх"
+        ],
+        "easier": "Менші кола."
+      }
+    },
+    "stretch_side_lunge": {
+      "name": "Перекат у бічному випаді",
+      "garmin_name": "Side Lunge Stretch",
+      "garmin": {
+        "category": "WARM_UP",
+        "exercise": "STRETCH_SIDE_LUNGE"
+      },
+      "catalog": "strength",
+      "pattern": "warmup",
+      "equipment": [],
+      "calisthenics": true,
+      "level": 1,
+      "unit": "seconds",
+      "sides": true,
+      "load": "bodyweight",
+      "range": [
+        20,
+        45
+      ],
+      "step": 5,
+      "next": null,
+      "prev": null,
+      "scene": "native_wide_side_lunge",
+      "guide": {
+        "why": "Привідні м’язи перед бічною роботою.",
+        "setup": "Широка стійка.",
+        "move": "Повільно перекочуйся з боку на бік у неглибокий бічний випад.",
+        "finish": "Затримайся на 1–2 с у кожному боці, рухайся плавно.",
+        "check": [
+          "П’яти на підлозі"
+        ],
+        "mistakes": [
+          "Коліно заходить усередину",
+          "П’ята зігнутої ноги відривається від підлоги"
+        ],
+        "easier": "Менша глибина."
+      }
+    },
+    "s_hip_flexor": {
+      "name": "Розтяжка згиначів стегна у випаді",
+      "garmin_name": "Lunging Hip Flexor Stretch",
+      "garmin": {
+        "category": "WARM_UP",
+        "exercise": "STRETCH_LUNGING_HIP_FLEXOR"
+      },
+      "catalog": "strength",
+      "pattern": "stretch",
+      "equipment": [],
+      "calisthenics": true,
+      "level": 1,
+      "unit": "seconds",
+      "sides": true,
+      "load": "bodyweight",
+      "range": [
+        30,
+        60
+      ],
+      "step": 10,
+      "next": null,
+      "prev": null,
+      "scene": "hipflex",
+      "guide": {
+        "why": "Згиначі стегна після сидіння та присідань.",
+        "setup": "Коліно на м’якій опорі, друга стопа попереду.",
+        "move": "Підкрути таз і трохи перемісти його вперед до легкого натягу спереду стегна.",
+        "finish": "Дихай рівно.",
+        "check": [
+          "Поперек не прогинається"
+        ],
+        "mistakes": [
+          "Прогин у попереку замість підкручування таза",
+          "Переднє коліно далеко за носком"
+        ],
+        "easier": "Менший крок уперед або коліно на подушці."
+      }
+    },
+    "s_lat": {
+      "name": "Розтяжка найширших з опорою на лаву",
+      "garmin_name": "Lat Stretch",
+      "garmin": {
+        "category": "WARM_UP",
+        "exercise": "STRETCH_LAT"
+      },
+      "catalog": "strength",
+      "pattern": "stretch",
+      "equipment": [
+        "bench"
+      ],
+      "calisthenics": true,
+      "level": 1,
+      "unit": "seconds",
+      "sides": false,
+      "load": "bodyweight",
+      "range": [
+        30,
+        60
+      ],
+      "step": 10,
+      "next": null,
+      "prev": null,
+      "scene": "lat",
+      "guide": {
+        "why": "Найширші та плечі після тяг.",
+        "setup": "Стань за крок від лави, постав на неї долоні на ширині плечей, руки прямі.",
+        "move": "Відведи таз назад і опусти груди між руками, доки не відчуєш натяг під пахвами й уздовж боків.",
+        "finish": "Тримай заданий час, видихай повільно й на кожному видиху трохи глибше опускай груди.",
+        "check": [
+          "Спина рівна, не округлюється",
+          "Шия продовжує хребет"
+        ],
+        "mistakes": [
+          "Прогин у попереку",
+          "Підняті до вух плечі"
+        ],
+        "easier": "Вища опора або менший нахил."
+      }
+    },
+    "s_calf": {
+      "name": "Розтяжка литки біля стіни",
+      "garmin_name": "Calf Stretch",
+      "garmin": {
+        "category": "WARM_UP",
+        "exercise": "STRETCH_CALF"
+      },
+      "catalog": "strength",
+      "pattern": "stretch",
+      "equipment": [],
+      "calisthenics": true,
+      "level": 1,
+      "unit": "seconds",
+      "sides": true,
+      "load": "bodyweight",
+      "range": [
+        30,
+        60
+      ],
+      "step": 10,
+      "next": null,
+      "prev": null,
+      "scene": "calf_stretch",
+      "guide": {
+        "why": "Литки після стрибків.",
+        "setup": "Стань обличчям до стіни, долоні на ній на рівні плечей. Одна нога попереду, друга на великий крок позаду, носки дивляться вперед.",
+        "move": "Зігни переднє коліно й перенось вагу до стіни, задня нога пряма, п’ята на підлозі.",
+        "finish": "Тримай заданий час, потім зміни ногу. Для глибшого м’яза литки трохи зігни заднє коліно на 10–15 с.",
+        "check": [
+          "Задня п’ята притиснута",
+          "Носок задньої ноги дивиться вперед"
+        ],
+        "mistakes": [
+          "Відрив задньої п’яти",
+          "Прогин у попереку"
+        ],
+        "easier": "Менший крок назад."
+      }
+    },
+    "s_hamstring": {
+      "name": "Розтяжка задньої поверхні стегна лежачи",
+      "garmin_name": "Hamstring Stretch",
+      "garmin": {
+        "category": "WARM_UP",
+        "exercise": "STRETCH_HAMSTRING"
+      },
+      "catalog": "strength",
+      "pattern": "stretch",
+      "equipment": [],
+      "calisthenics": true,
+      "level": 1,
+      "unit": "seconds",
+      "sides": true,
+      "load": "bodyweight",
+      "range": [
+        30,
+        60
+      ],
+      "step": 10,
+      "next": null,
+      "prev": null,
+      "scene": "hamstring",
+      "guide": {
+        "why": "Задня поверхня стегна після тяг.",
+        "setup": "Ляж на спину, одна нога пряма на підлозі. Другу ногу зігни, обхопи руками стегно ззаду.",
+        "move": "Тримаючи стегно вертикально, повільно випрямляй коліно до легкого натягу (5–6 з 10).",
+        "finish": "Тримай заданий час, дихай рівно, потім інша нога.",
+        "check": [
+          "Таз і поперек на підлозі",
+          "Носок розслаблений або трохи до себе"
+        ],
+        "mistakes": [
+          "Тягнути ногу руками до болю",
+          "Піднімати голову й плечі"
+        ],
+        "easier": "Коліно трохи зігнуте або рушник за стопою."
+      }
+    },
+    "s_chest": {
+      "name": "Розтяжка грудних біля одвірка",
+      "garmin_name": "Wall Chest and Shoulder Stretch",
+      "garmin": {
+        "category": "WARM_UP",
+        "exercise": "STRETCH_WALL_CHEST_AND_SHOULDER"
+      },
+      "catalog": "strength",
+      "pattern": "stretch",
+      "equipment": [],
+      "calisthenics": true,
+      "level": 1,
+      "unit": "seconds",
+      "sides": true,
+      "load": "bodyweight",
+      "range": [
+        30,
+        60
+      ],
+      "step": 10,
+      "next": null,
+      "prev": null,
+      "scene": "chest",
+      "guide": {
+        "why": "Груди й передня частина плеча після жимів.",
+        "setup": "Передпліччя на одвірку.",
+        "move": "Злегка розверни груди від опори.",
+        "finish": "Тримай заданий час, дихай рівно, потім інша рука.",
+        "check": [
+          "Без болю в плечі"
+        ],
+        "mistakes": [
+          "Прогин у попереку замість розвороту грудей",
+          "Плече тягнеться вперед до вуха"
+        ],
+        "easier": "Лікоть нижче рівня плеча."
+      }
+    },
+    "s_piriformis": {
+      "name": "Розтяжка сідниць лежачи («четвірка»)",
+      "garmin_name": "Lying Piriformis Stretch",
+      "garmin": {
+        "category": "WARM_UP",
+        "exercise": "STRETCH_LYING_PIRIFORMIS"
+      },
+      "catalog": "strength",
+      "pattern": "stretch",
+      "equipment": [],
+      "calisthenics": true,
+      "level": 1,
+      "unit": "seconds",
+      "sides": true,
+      "load": "bodyweight",
+      "range": [
+        30,
+        60
+      ],
+      "step": 10,
+      "next": null,
+      "prev": null,
+      "scene": "glute_stretch",
+      "guide": {
+        "why": "Сідниці та зовнішнє обертання стегна.",
+        "setup": "Ляж на спину, обидві стопи на підлозі. Щиколотку однієї ноги поклади на стегно іншої біля коліна.",
+        "move": "Обхопи руками стегно опорної ноги й підтягни її до грудей, доки не відчуєш натяг у сідниці.",
+        "finish": "Тримай заданий час, потім зміни ногу.",
+        "check": [
+          "Голова й плечі лежать на підлозі",
+          "Таз рівний"
+        ],
+        "mistakes": [
+          "Тиснути на коліно зігнутої ноги",
+          "Затримувати дихання"
+        ],
+        "easier": "Опорну стопу лишити на підлозі."
+      }
+    },
+    "s_butterfly": {
+      "name": "«Метелик» сидячи",
+      "garmin_name": "Butterfly Stretch",
+      "garmin": {
+        "category": "WARM_UP",
+        "exercise": "STRETCH_BUTTERFLY"
+      },
+      "catalog": "strength",
+      "pattern": "stretch",
+      "equipment": [],
+      "calisthenics": true,
+      "level": 1,
+      "unit": "seconds",
+      "sides": false,
+      "load": "bodyweight",
+      "range": [
+        30,
+        60
+      ],
+      "step": 10,
+      "next": null,
+      "prev": null,
+      "scene": "butterfly",
+      "guide": {
+        "why": "Привідні м’язи після бічних випадів.",
+        "setup": "Сядь на підлогу, з’єднай підошви, п’яти ближче до себе. Візьмися руками за стопи.",
+        "move": "Витягнись угору, спина рівна, і дозволь колінам м’яко опускатися в сторони.",
+        "finish": "Тримай заданий час. Для глибшого натягу — нахил уперед від таза з рівною спиною.",
+        "check": [
+          "Спина рівна, не сутулишся",
+          "Натяг у внутрішній поверхні стегна, без болю в колінах"
+        ],
+        "mistakes": [
+          "Тиснути руками на коліна",
+          "Округлювати спину"
+        ],
+        "easier": "П’яти далі від себе або сядь на складений рушник."
+      }
+    },
+    "s_childs": {
+      "name": "Поза дитини",
+      "garmin_name": "Child's Pose Stretch",
+      "garmin": {
+        "category": "WARM_UP",
+        "exercise": "STRETCH_CHILDS_POSE"
+      },
+      "catalog": "strength",
+      "pattern": "stretch",
+      "equipment": [],
+      "calisthenics": true,
+      "level": 1,
+      "unit": "seconds",
+      "sides": false,
+      "load": "bodyweight",
+      "range": [
+        30,
+        90
+      ],
+      "step": 15,
+      "next": null,
+      "prev": null,
+      "scene": "native_childs_pose",
+      "guide": {
+        "why": "Спокійне завершення, розслаблення спини.",
+        "setup": "Коліна на підлозі.",
+        "move": "Відведи таз до п’ят, руки вперед.",
+        "finish": "Дихай повільно.",
+        "check": [
+          "Таз опускається до п’ят",
+          "Лоб на підлозі або на кулаках",
+          "Плечі розслаблені"
+        ],
+        "mistakes": [
+          "Затримувати дихання",
+          "Тягнутися через біль у колінах"
+        ],
+        "easier": "Подушка між сідницями й п’ятами або коліна ширше."
+      }
+    },
+    "y_cat_cow": {
+      "name": "Кішка-корова",
+      "garmin_name": "Cat Cow",
+      "garmin": {
+        "category": "CORE",
+        "exercise": "CAT_COW"
+      },
+      "catalog": "yoga",
+      "pattern": "mobility",
+      "equipment": [],
+      "calisthenics": true,
+      "level": 1,
+      "unit": "seconds",
+      "sides": false,
+      "load": "bodyweight",
+      "range": [
+        45,
+        90
+      ],
+      "step": 15,
+      "next": null,
+      "prev": null,
+      "scene": "cat",
+      "guide": {
+        "why": "М’яко розігріти хребет.",
+        "setup": "Упор на долонях і колінах: долоні під плечима, коліна під тазом.",
+        "move": "На видиху округли спину вгору й опусти голову (кішка). На вдиху м’яко прогнись, груди вперед, погляд уперед (корова).",
+        "finish": "Рухайся повільно разом із диханням увесь заданий час.",
+        "check": [
+          "Руки прямі",
+          "Рух іде по всій спині, від таза до шиї"
+        ],
+        "mistakes": [
+          "Різкий прогин у попереку",
+          "Закидання голови назад"
+        ],
+        "easier": "Менша амплітуда."
+      }
+    },
+    "y_side_stretch": {
+      "name": "Нахил убік стоячи",
+      "garmin_name": "Standing Side Stretch",
+      "garmin": {
+        "category": "MOVE",
+        "exercise": "STANDING_SIDE_STRETCH"
+      },
+      "catalog": "yoga",
+      "pattern": "mobility",
+      "equipment": [],
+      "calisthenics": true,
+      "level": 1,
+      "unit": "seconds",
+      "sides": true,
+      "load": "bodyweight",
+      "range": [
+        20,
+        45
+      ],
+      "step": 5,
+      "next": null,
+      "prev": null,
+      "scene": "side_stretch",
+      "guide": {
+        "why": "Бічна поверхня тулуба й найширші.",
+        "setup": "Стопи на ширині таза, коліна м’які, руки вгору.",
+        "move": "Тягнись угору й нахиляйся вбік, ніби між двома стінами — без провалу вперед чи назад.",
+        "finish": "Тримай заданий час з рівним диханням, потім інший бік.",
+        "check": [
+          "Обидві стопи рівномірно на підлозі",
+          "Таз не зміщується вперед"
+        ],
+        "mistakes": [
+          "Нахил уперед замість убік",
+          "Затиснута шия"
+        ],
+        "easier": "Одна рука на поясі."
+      }
+    },
+    "y_low_lunge": {
+      "name": "Низький випад з коліном на підлозі",
+      "garmin_name": "Low Lunge with Knee Down",
+      "garmin": {
+        "category": "POSE",
+        "exercise": "LOW_LUNGE_WITH_KNEE_DOWN"
+      },
+      "catalog": "yoga",
+      "pattern": "flex_hip",
+      "equipment": [],
+      "calisthenics": true,
+      "level": 1,
+      "unit": "seconds",
+      "sides": true,
+      "load": "bodyweight",
+      "range": [
+        30,
+        60
+      ],
+      "step": 10,
+      "next": null,
+      "prev": null,
+      "scene": "hipflex",
+      "guide": {
+        "why": "Згиначі стегна — довший крок у бігу, свобода таза в танцях.",
+        "setup": "Коліно на м’якій опорі, переднє коліно над стопою.",
+        "move": "Підкрути таз і перемісти його трохи вперед.",
+        "finish": "Тримай натяг 5–6/10, без болю.",
+        "check": [
+          "Поперек не прогинається"
+        ],
+        "mistakes": [
+          "Прогин у попереку",
+          "Переднє коліно заходить усередину"
+        ],
+        "easier": "Менший крок."
+      }
+    },
+    "y_wide_side_lunge": {
+      "name": "Широкий бічний випад (утримання)",
+      "garmin_name": "Wide Side Lunge",
+      "garmin": {
+        "category": "POSE",
+        "exercise": "WIDE_SIDE_LUNGE"
+      },
+      "catalog": "yoga",
+      "pattern": "flex_hip",
+      "equipment": [],
+      "calisthenics": true,
+      "level": 1,
+      "unit": "seconds",
+      "sides": true,
+      "load": "bodyweight",
+      "range": [
+        20,
+        45
+      ],
+      "step": 5,
+      "next": null,
+      "prev": null,
+      "scene": "native_wide_side_lunge",
+      "guide": {
+        "why": "Привідні м’язи й глибина бічного присіду — сноуборд.",
+        "setup": "Широка стійка.",
+        "move": "Опустись у бічний випад і втримай, пряма нога розтягується.",
+        "finish": "Тримай заданий час, потім інший бік.",
+        "check": [
+          "П’ята зігнутої ноги на підлозі"
+        ],
+        "mistakes": [
+          "Коліно зігнутої ноги заходить усередину",
+          "Округлена спина"
+        ],
+        "easier": "Руки на опорі."
+      }
+    },
+    "y_hamstring": {
+      "name": "Розтяжка задньої поверхні стегна лежачи",
+      "garmin_name": "Hamstring Stretch",
+      "garmin": {
+        "category": "MOVE",
+        "exercise": "HAMSTRING_STRETCH"
+      },
+      "catalog": "yoga",
+      "pattern": "flex_ham",
+      "equipment": [],
+      "calisthenics": true,
+      "level": 1,
+      "unit": "seconds",
+      "sides": true,
+      "load": "bodyweight",
+      "range": [
+        30,
+        60
+      ],
+      "step": 10,
+      "next": null,
+      "prev": null,
+      "scene": "hamstring",
+      "guide": {
+        "why": "Задня поверхня стегна.",
+        "setup": "Лежачи, руки під стегном.",
+        "move": "Поступово випрямляй коліно до легкого натягу.",
+        "finish": "Тримай заданий час, дихай рівно, потім інша нога.",
+        "check": [
+          "Таз і поперек на підлозі",
+          "Натяг 5–6 з 10, без болю під коліном"
+        ],
+        "mistakes": [
+          "Тягнути ривками"
+        ],
+        "easier": "Коліно трохи зігнуте або рушник за стопою."
+      }
+    },
+    "y_piriformis": {
+      "name": "Розтяжка сідниць лежачи («четвірка»)",
+      "garmin_name": "Piriformis Stretch",
+      "garmin": {
+        "category": "MOVE",
+        "exercise": "PIRIFORMIS_STRETCH"
+      },
+      "catalog": "yoga",
+      "pattern": "flex_hip",
+      "equipment": [],
+      "calisthenics": true,
+      "level": 1,
+      "unit": "seconds",
+      "sides": true,
+      "load": "bodyweight",
+      "range": [
+        30,
+        60
+      ],
+      "step": 10,
+      "next": null,
+      "prev": null,
+      "scene": "glute_stretch",
+      "guide": {
+        "why": "Сідниці та обертання стегна.",
+        "setup": "Лежачи на спині.",
+        "move": "Щиколотку на протилежне стегно, підтягни опорну ногу до грудей.",
+        "finish": "Тримай заданий час, потім зміни ногу.",
+        "check": [
+          "Голова й плечі лежать на підлозі",
+          "Таз рівний"
+        ],
+        "mistakes": [
+          "Тиснути на коліно зігнутої ноги",
+          "Затримувати дихання"
+        ],
+        "easier": "Опорну стопу лишити на підлозі."
+      }
+    },
+    "y_bound_angle": {
+      "name": "«Метелик» (зв’язаний кут)",
+      "garmin_name": "Bound Angle",
+      "garmin": {
+        "category": "POSE",
+        "exercise": "BOUND_ANGLE"
+      },
+      "catalog": "yoga",
+      "pattern": "flex_hip",
+      "equipment": [],
+      "calisthenics": true,
+      "level": 1,
+      "unit": "seconds",
+      "sides": false,
+      "load": "bodyweight",
+      "range": [
+        30,
+        75
+      ],
+      "step": 15,
+      "next": null,
+      "prev": null,
+      "scene": "butterfly",
+      "guide": {
+        "why": "Привідні м’язи та тазостегнові.",
+        "setup": "Сидячи, підошви разом.",
+        "move": "Спина рівна, коліна м’яко опускаються.",
+        "finish": "Тримай заданий час. Для глибшого натягу — нахил уперед від таза з рівною спиною.",
+        "check": [
+          "Спина рівна",
+          "Натяг у внутрішній поверхні стегна, без болю в колінах"
+        ],
+        "mistakes": [
+          "Тиснути на коліна руками"
+        ],
+        "easier": "Сядь на складений рушник або п’яти далі від себе."
+      }
+    },
+    "y_supine_twist": {
+      "name": "Скручування лежачи",
+      "garmin_name": "Supine Spinal Twist",
+      "garmin": {
+        "category": "POSE",
+        "exercise": "SUPINE_SPINAL_TWIST"
+      },
+      "catalog": "yoga",
+      "pattern": "flex_spine",
+      "equipment": [],
+      "calisthenics": true,
+      "level": 1,
+      "unit": "seconds",
+      "sides": true,
+      "load": "bodyweight",
+      "range": [
+        30,
+        60
+      ],
+      "step": 10,
+      "next": null,
+      "prev": null,
+      "scene": "spinal_twist",
+      "guide": {
+        "why": "Обертання хребта, розслаблення попереку.",
+        "setup": "Лежачи на спині, руки в сторони, коліна зігнуті.",
+        "move": "Нахили обидва коліна вбік, плечі на підлозі.",
+        "finish": "Тримай заданий час, повернись через центр і нахили коліна в інший бік.",
+        "check": [
+          "Обидва плечі на підлозі",
+          "Дихання повільне, живіт м’який"
+        ],
+        "mistakes": [
+          "Відривати протилежне плече",
+          "Ривком кидати коліна вбік"
+        ],
+        "easier": "Подушка під коліна."
+      }
+    },
+    "y_tree": {
+      "name": "Поза дерева",
+      "garmin_name": "Tree",
+      "garmin": {
+        "category": "POSE",
+        "exercise": "TREE"
+      },
+      "catalog": "yoga",
+      "pattern": "balance",
+      "equipment": [],
+      "calisthenics": true,
+      "level": 1,
+      "unit": "seconds",
+      "sides": true,
+      "load": "bodyweight",
+      "range": [
+        20,
+        60
+      ],
+      "step": 10,
+      "next": null,
+      "prev": null,
+      "scene": "native_tree_pose",
+      "guide": {
+        "why": "Статичний баланс на одній нозі.",
+        "setup": "Стань на одну ногу, погляд у точку.",
+        "move": "Стопу другої ноги постав на гомілку або стегно (не на коліно).",
+        "finish": "Ускладнення пізніше: погляд угору або заплющені очі.",
+        "check": [
+          "Таз рівний"
+        ],
+        "mistakes": [
+          "Стопа на колінному суглобі"
+        ],
+        "easier": "Пальці торкаються підлоги."
+      }
+    },
+    "y_warrior3": {
+      "name": "Поза воїна III",
+      "garmin_name": "Warrior Three",
+      "garmin": {
+        "category": "POSE",
+        "exercise": "WARRIOR_THREE"
+      },
+      "catalog": "yoga",
+      "pattern": "balance",
+      "equipment": [],
+      "calisthenics": true,
+      "level": 2,
+      "unit": "seconds",
+      "sides": true,
+      "load": "bodyweight",
+      "range": [
+        15,
+        40
+      ],
+      "step": 5,
+      "next": null,
+      "prev": null,
+      "scene": "warrior3",
+      "guide": {
+        "why": "Динамічний баланс і задня поверхня ноги — приземлення, танці.",
+        "setup": "Стань на одну ногу, коліно м’яке.",
+        "move": "Нахили корпус уперед і витягни вільну ногу назад — тіло як літера «Т». Руки вперед або на поясі.",
+        "finish": "Тримай таз рівно.",
+        "check": [
+          "Таз не розкривається вбік"
+        ],
+        "mistakes": [
+          "Округлена спина"
+        ],
+        "easier": "Руки на спинці стільця."
+      }
+    },
+    "y_childs": {
+      "name": "Поза дитини",
+      "garmin_name": "Child's",
+      "garmin": {
+        "category": "POSE",
+        "exercise": "CHILDS"
+      },
+      "catalog": "yoga",
+      "pattern": "flex_spine",
+      "equipment": [],
+      "calisthenics": true,
+      "level": 1,
+      "unit": "seconds",
+      "sides": false,
+      "load": "bodyweight",
+      "range": [
+        45,
+        90
+      ],
+      "step": 15,
+      "next": null,
+      "prev": null,
+      "scene": "native_childs_pose",
+      "guide": {
+        "why": "Розслаблення наприкінці.",
+        "setup": "Коліна на підлозі.",
+        "move": "Таз до п’ят, руки вперед.",
+        "finish": "Повільне дихання.",
+        "check": [
+          "Таз опускається до п’ят",
+          "Лоб на підлозі або на кулаках",
+          "Плечі розслаблені"
+        ],
+        "mistakes": [
+          "Затримувати дихання",
+          "Тягнутися через біль у колінах"
+        ],
+        "easier": "Подушка між сідницями й п’ятами або коліна ширше."
+      }
+    },
+    "wall_slide": {
+      "name": "Ковзання руками по стіні",
+      "garmin_name": "Wall Slide",
+      "garmin": {
+        "category": "LATERAL_RAISE",
+        "exercise": "WALL_SLIDE"
+      },
+      "catalog": "strength",
+      "pattern": "shoulder_health",
+      "equipment": [],
+      "calisthenics": true,
+      "level": 1,
+      "unit": "reps",
+      "sides": false,
+      "load": "bodyweight",
+      "range": [
+        8,
+        15
+      ],
+      "step": 1,
+      "next": null,
+      "prev": null,
+      "tempo": "3 с угору, 3 с униз",
+      "scene": "wallslide",
+      "guide": {
+        "why": "Постава після сидіння: лопатки вниз, руки над головою без прогину в попереку.",
+        "setup": "Спиною до стіни, п’яти на 10 см від неї, поперек і потилиця біля стіни. Передпліччя на стіні, лікті під 90°.",
+        "move": "Повільно ковзай руками вгору, не відриваючи передпліч і попереку від стіни.",
+        "finish": "Опусти лікті нижче плечей, зводячи лопатки вниз.",
+        "check": [
+          "Поперек не відходить від стіни",
+          "Плечі не тягнуться до вух"
+        ],
+        "mistakes": [
+          "Ривком і без контролю",
+          "Прогин у попереку"
+        ],
+        "easier": "Менша амплітуда."
+      }
+    },
+    "face_pull": {
+      "name": "Тяга каната до обличчя (верхній блок)",
+      "garmin_name": "Face Pull",
+      "garmin": {
+        "category": "ROW",
+        "exercise": "FACE_PULL"
+      },
+      "catalog": "strength",
+      "pattern": "shoulder_health",
+      "equipment": [
+        "upper_cable"
+      ],
+      "calisthenics": false,
+      "level": 1,
+      "unit": "reps",
+      "sides": false,
+      "load": "machine",
+      "range": [
+        12,
+        15
+      ],
+      "step": 1,
+      "load_step": 5,
+      "next": null,
+      "prev": null,
+      "tempo": "1 с пауза біля обличчя",
+      "scene": "face_pull",
+      "guide": {
+        "why": "Задні дельти й м’язи-ротатори плеча: постава, здорові плечі для турніка, брусів і віджимань.",
+        "setup": "Блок трохи вище голови, канатна рукоять (або дві одинарні). Візьми канат хватом зверху, відступи на крок-два, руки прямі, стопи на ширині плечей, коліна м’які.",
+        "move": "Тягни канат до обличчя: лікті йдуть високо в сторони й назад, кінці каната розводь біля вух, ніби показуєш біцепси.",
+        "finish": "Пауза 1 с із зведеними лопатками, потім 2 с повертай руки вперед до прямих.",
+        "check": [
+          "Лікті на рівні плечей або трохи вище",
+          "Корпус нерухомий, не відкидаєшся назад",
+          "Шия довга, плечі далеко від вух"
+        ],
+        "mistakes": [
+          "Тягнути до грудей, як звичайну тягу",
+          "Завелика вага — розгойдування корпусом"
+        ],
+        "easier": "−5 кг або менша амплітуда."
+      }
+    },
+    "cable_row": {
+      "name": "Тяга нижнього блока сидячи",
+      "garmin_name": "Seated Cable Row",
+      "garmin": {
+        "category": "ROW",
+        "exercise": "SEATED_CABLE_ROW"
+      },
+      "catalog": "strength",
+      "pattern": "pull_h",
+      "equipment": [
+        "lower_cable"
+      ],
+      "calisthenics": false,
+      "level": 1,
+      "unit": "reps",
+      "sides": false,
+      "load": "machine",
+      "range": [
+        8,
+        12
+      ],
+      "step": 1,
+      "load_step": 5,
+      "next": null,
+      "prev": null,
+      "tempo": "1 с пауза біля живота",
+      "scene": "cable_row",
+      "guide": {
+        "why": "Горизонтальна тяга: середина спини, лопатки, постава — противага віджиманням і жимам.",
+        "setup": "Сядь на лаву тренажера, стопи на платформі, коліна трохи зігнуті. Вузька рукоять у руках, спина рівна, груди вгору, плечі опущені.",
+        "move": "Тягни рукоять до низу живота: лікті ковзають уздовж тулуба назад, лопатки зводяться.",
+        "finish": "Пауза 1 с, потім 2 с повільно відпускай до прямих рук, не округлюючи спину.",
+        "check": [
+          "Корпус майже нерухомий, нахил не більше ±10°",
+          "Плечі не підіймаються до вух",
+          "Лишається 2 повторення в запасі"
+        ],
+        "mistakes": [
+          "Розгойдування корпусом уперед-назад",
+          "Округлений поперек на поверненні"
+        ],
+        "easier": "−5 кг."
+      }
+    },
+    "back_ext": {
+      "name": "Гіперекстензія на лаві 45°",
+      "garmin_name": "Hyperextension",
+      "garmin": {
+        "category": "HYPEREXTENSION",
+        "exercise": "HYPEREXTENSION"
+      },
+      "catalog": "strength",
+      "pattern": "hinge",
+      "equipment": [
+        "hyperextension_bench"
+      ],
+      "calisthenics": true,
+      "level": 1,
+      "unit": "reps",
+      "sides": false,
+      "load": "bodyweight",
+      "range": [
+        10,
+        15
+      ],
+      "step": 1,
+      "next": "sl_back_ext",
+      "prev": null,
+      "tempo": "2 с униз, 1 с пауза вгорі",
+      "scene": "back_ext",
+      "guide": {
+        "why": "Сідниці, задня поверхня стегна й розгиначі спини з опорою — безпечна школа нахилу від таза, як у румунській тязі.",
+        "setup": "Валики під ахілами. Висоту подушки підбери так, щоб її верхній край був на 2–3 см нижче кісток таза — таз має вільно згинатися. Руки схрещені на грудях.",
+        "move": "Нахились униз від таза з рівною спиною, доки не відчуєш натяг задньої поверхні стегна (тулуб приблизно перпендикулярно до ніг).",
+        "finish": "Підіймайся, стискаючи сідниці, до прямої лінії «п’яти — таз — голова» і не вище. Пауза 1 с.",
+        "check": [
+          "Рухається таз, спина рівна весь час",
+          "Вгорі тіло — пряма лінія, без прогину в попереку",
+          "Погляд у підлогу, шия продовжує хребет"
+        ],
+        "mistakes": [
+          "Перерозгинання вгорі",
+          "Подушка вище таза — рух іде від попереку",
+          "Ривки з інерцією"
+        ],
+        "easier": "Менша амплітуда або руки вздовж тіла."
+      }
+    },
+    "sl_back_ext": {
+      "name": "Гіперекстензія на одній нозі",
+      "garmin_name": "Single-leg Back Extension",
+      "garmin": {
+        "category": "HYPEREXTENSION",
+        "exercise": "SINGLE_LEG_BACK_EXTENSION"
+      },
+      "catalog": "strength",
+      "pattern": "hinge",
+      "equipment": [
+        "hyperextension_bench"
+      ],
+      "calisthenics": true,
+      "level": 2,
+      "unit": "reps",
+      "sides": true,
+      "load": "bodyweight",
+      "range": [
+        6,
+        10
+      ],
+      "step": 1,
+      "next": null,
+      "prev": "back_ext",
+      "tempo": "2 с униз, 1 с пауза вгорі",
+      "scene": "back_ext",
+      "guide": {
+        "why": "Наступний рівень гіперекстензії: кожна сторона окремо, баланс таза — як у бігу й на сноуборді.",
+        "setup": "Як для звичайної гіперекстензії, але одна стопа під валиком, друга нога зігнута й висить вільно.",
+        "move": "Нахились від таза з рівною спиною, таз не перекошується.",
+        "finish": "Підіймись до прямої лінії, стиснувши сідницю опорної ноги. Пауза 1 с. Потім інша нога.",
+        "check": [
+          "Таз рівний, не повертається",
+          "Спина рівна"
+        ],
+        "mistakes": [
+          "Скручування таза",
+          "Перерозгинання вгорі"
+        ],
+        "easier": "Повернись до гіперекстензії на двох ногах."
+      }
+    },
+    "preacher_curl": {
+      "name": "Згинання рук з EZ-грифом на лаві Скотта",
+      "garmin_name": "EZ-Bar Preacher Curl",
+      "garmin": {
+        "category": "CURL",
+        "exercise": "EZ_BAR_PREACHER_CURL"
+      },
+      "catalog": "strength",
+      "pattern": "arm_flex",
+      "equipment": [
+        "preacher_bench"
+      ],
+      "calisthenics": false,
+      "level": 1,
+      "unit": "reps",
+      "sides": false,
+      "load": "barbell",
+      "range": [
+        8,
+        12
+      ],
+      "step": 1,
+      "load_step": 2.5,
+      "next": null,
+      "prev": null,
+      "tempo": "3 с униз",
+      "scene": "preacher",
+      "guide": {
+        "why": "Біцепси й сухожилля ліктя: допомагає підтягуванням і тягам, береже лікті від перевантаження.",
+        "setup": "Сядь так, щоб пахви лягли на верхній край подушки, плечі повністю на ній. Хват EZ-грифа на внутрішніх вигинах, ширина плечей. Вага — гриф разом із дисками.",
+        "move": "Зігни руки й підведи гриф до рівня підборіддя. Плечі й лікті притиснуті до подушки.",
+        "finish": "3 с опускай до майже прямих рук — без повного розгинання й без удару внизу.",
+        "check": [
+          "Лікті не відриваються від подушки",
+          "Внизу руки ледь зігнуті",
+          "Зап’ястя рівні"
+        ],
+        "mistakes": [
+          "Повне розгинання з вагою внизу — ризик для ліктя",
+          "Підкидання корпусом"
+        ],
+        "easier": "Легший гриф або −2,5 кг."
+      }
+    },
+    "shuttle": {
+      "name": "Човниковий біг 10 м",
+      "garmin_name": "Sprint",
+      "garmin": {
+        "category": "RUN",
+        "exercise": "SPRINT"
+      },
+      "catalog": "strength",
+      "pattern": "agility",
+      "equipment": [
+        "open_space"
+      ],
+      "calisthenics": true,
+      "level": 1,
+      "unit": "reps",
+      "words": [
+        "відрізок по 10 м",
+        "відрізки по 10 м",
+        "відрізків по 10 м"
+      ],
+      "sides": false,
+      "load": "bodyweight",
+      "range": [
+        4,
+        6
+      ],
+      "step": 2,
+      "next": null,
+      "prev": null,
+      "tempo": "≈80 % швидкості",
+      "scene": "shuttle",
+      "guide": {
+        "why": "Розгін, гальмування й розворот — реакція й стійкість колін для сноуборду, танців і повсякденних ривків без тривалого бігу.",
+        "setup": "Познач дві лінії на відстані 10 м (рушник, конус, пляшка). Низька стійка: коліна м’які, вага на передній частині стоп, руки зігнуті.",
+        "move": "Розженись до лінії, за 2–3 м до неї гальмуй короткими кроками, присядь, торкнись лінії рукою й розвернись. Один відрізок — 10 м в один бік.",
+        "finish": "Після серії йди пішки назад і відновлюйся до наступної (45–60 с). Розвороти чергуй: то через ліве, то через праве плече.",
+        "check": [
+          "Гальмування низько, коліно над стопою",
+          "Швидкість ≈80 %: техніка важливіша",
+          "Дихання відновилось до наступної серії"
+        ],
+        "mistakes": [
+          "Розворот на прямих ногах",
+          "Біг на максимум у перший тиждень"
+        ],
+        "easier": "Менше відрізків або 70 % швидкості."
+      }
+    },
+    "bench_bb": {
+      "name": "Жим штанги лежачи",
+      "garmin_name": "Barbell Bench Press",
+      "garmin": {
+        "category": "BENCH_PRESS",
+        "exercise": "BARBELL_BENCH_PRESS"
+      },
+      "catalog": "strength",
+      "pattern": "push_h",
+      "equipment": [
+        "barbell",
+        "bench"
+      ],
+      "calisthenics": false,
+      "level": 2,
+      "unit": "reps",
+      "sides": false,
+      "load": "barbell",
+      "range": [
+        6,
+        10
+      ],
+      "step": 1,
+      "load_step": 2.5,
+      "next": null,
+      "prev": null,
+      "tempo": "2 с униз",
+      "scene": "bench",
+      "guide": {
+        "why": "Важкий горизонтальний жим — альтернатива віджиманням, коли потрібна більша вага.",
+        "setup": "Ляж на лаву, очі під грифом. Лопатки зведені й опущені, стопи на підлозі. Хват трохи ширше плечей. Без страхувальника — лише вага з запасом 3+ повторення.",
+        "move": "Опусти гриф за 2 с до нижньої частини грудей, лікті під кутом ≈45° до тулуба.",
+        "finish": "Вижми вгору до прямих рук над плечима, лопатки лишаються зведеними.",
+        "check": [
+          "Таз і лопатки на лаві",
+          "Гриф торкається грудей м’яко, без відскоку"
+        ],
+        "mistakes": [
+          "Лікті розведені на 90°",
+          "Відрив таза від лави"
+        ],
+        "easier": "Віджимання або −5 кг."
+      }
+    },
+    "plank_arm_raise": {
+      "name": "Планка з почерговим підйомом руки",
+      "garmin_name": "Plank with Arm Raise",
+      "garmin": {
+        "category": "PLANK",
+        "exercise": "PLANK_WITH_ARM_RAISE"
+      },
+      "catalog": "strength",
+      "pattern": "core_anti_rot",
+      "equipment": [],
+      "calisthenics": true,
+      "level": 1,
+      "unit": "reps",
+      "sides": true,
+      "load": "bodyweight",
+      "range": [
+        5,
+        10
+      ],
+      "step": 1,
+      "next": null,
+      "prev": null,
+      "tempo": "2 с рука попереду",
+      "scene": "plank_reach",
+      "guide": {
+        "why": "Протидія скручуванню без тренажера: корпус і таз не повертаються, коли одна рука відривається від підлоги — стабільність для сноуборду, танців і бігу.",
+        "setup": "Упор на прямих руках: долоні під плечима, стопи трохи ширше плечей, тіло — пряма лінія від п’ят до голови.",
+        "move": "Витягни одну руку вперед на рівні плеча й утримай 2 с. Таз не хитається й не повертається.",
+        "finish": "Поверни руку на підлогу й повтори іншою. Задане число — на кожну руку.",
+        "check": [
+          "Таз рівний, як склянка води на попереку",
+          "Плечі над долонями",
+          "Дихання не затримуєш"
+        ],
+        "mistakes": [
+          "Таз піднімається або повертається",
+          "Стопи разом — так важче втримати рівновагу на першому етапі"
+        ],
+        "easier": "З колін або стопи ширше."
+      }
+    },
+    "step_up": {
+      "name": "Зашагування на лаву",
+      "garmin_name": "Step-up",
+      "garmin": {
+        "category": "SQUAT",
+        "exercise": "STEP_UP"
+      },
+      "catalog": "strength",
+      "pattern": "lunge",
+      "equipment": [
+        "bench"
+      ],
+      "calisthenics": true,
+      "level": 1,
+      "unit": "reps",
+      "sides": true,
+      "load": "bodyweight",
+      "range": [
+        10,
+        20
+      ],
+      "step": 2,
+      "next": null,
+      "prev": null,
+      "tempo": "рівний ритм ≈1 крок на секунду",
+      "scene": "step_up",
+      "guide": {
+        "why": "Кардіо без бігу й без орбітрека: великі м’язи ніг працюють безперервно, пульс росте плавно, удару для суглобів майже немає.",
+        "setup": "Стійка лава або куб для стрибків (найнижча сторона, до 45–50 см). Стань за пів кроку, корпус рівно, руки вільно працюють.",
+        "move": "Постав усю стопу на лаву, підіймись, випрямивши ногу, приставь другу. Так само спустись: спершу ведуча нога, потім друга.",
+        "finish": "Ведучу ногу міняй щохвилини. Темп — розмовний: можеш говорити повними реченнями.",
+        "check": [
+          "Уся стопа на лаві, п’ята не звисає",
+          "Коліно дивиться в напрямку носка",
+          "Відштовхуєшся ногою на лаві, а не задньою"
+        ],
+        "mistakes": [
+          "Стрибати з лави вниз",
+          "Нахилятися корпусом уперед замість роботи ноги"
+        ],
+        "easier": "Нижча сходинка або повільніший ритм."
+      }
+    },
+    "box_jump": {
+      "name": "Стрибок на куб",
+      "garmin_name": "Box Jump",
+      "garmin": {
+        "category": "PLYO",
+        "exercise": "BOX_JUMP"
+      },
+      "catalog": "strength",
+      "pattern": "plyo",
+      "equipment": [
+        "plyo_box"
+      ],
+      "calisthenics": true,
+      "level": 1,
+      "unit": "reps",
+      "sides": false,
+      "load": "bodyweight",
+      "range": [
+        3,
+        5
+      ],
+      "step": 1,
+      "next": null,
+      "prev": null,
+      "tempo": "кожен стрибок окремо, униз — кроком",
+      "scene": "box_jump",
+      "guide": {
+        "why": "Вибухова сила ніг і м’яке приземлення: старт, стрибки, сноуборд, танці. Куб зменшує удар — приземляєшся вище, ніж відштовхувався.",
+        "setup": "Найнижча сторона куба (на старті — висота, на яку приземляєшся в напівприсід, а не в глибокий присід). Стань за 20–30 см від куба, стопи на ширині таза.",
+        "move": "Швидко присядь на чверть із замахом рук назад і вибухово стрибни вперед-угору, руки летять уперед. Приземлись на всю стопу в м’який напівприсід, коліна над носками.",
+        "finish": "Випрямись на кубі й зійди кроком униз (не стрибай вниз). Кожен стрибок — окремо, з паузою 5–10 с.",
+        "check": [
+          "Приземлення тихе й м’яке",
+          "Коліна не заходять усередину",
+          "Після стрибка стоїш рівно, без втрати рівноваги"
+        ],
+        "mistakes": [
+          "Стрибати вниз з куба",
+          "Завеликий куб — приземлення в глибокий присід",
+          "Стрибки серією на втомі"
+        ],
+        "easier": "Нижча висота або стрибок угору на місці з м’яким приземленням."
+      }
+    }
+  },
+  "native": {
+    "GG93b0e": {
+      "name": "Швидке розкриття рухливості (Garmin)",
+      "sport": "mobility",
+      "minutes": 7.5,
+      "url": "https://connect.garmin.com/app/provider-workout/GG93b0e?browse=1",
+      "equipment": [],
+      "steps": [
+        "Hip Circles 2×30 с",
+        "Ankle Stretch 2×30 с",
+        "Roll Down 2×30 с",
+        "Active Frog 2×45 с",
+        "Reverse T Hip Opener 2×45 с",
+        "Eight Point Shoulder Opener 2×45 с"
+      ],
+      "garmin_title": "Вправи для швидкого розкриття рухливості тіла"
+    },
+    "GG67ef4": {
+      "name": "Рухливість нижньої частини тіла (Garmin)",
+      "sport": "mobility",
+      "minutes": 9,
+      "url": "https://connect.garmin.com/app/provider-workout/GG67ef4?browse=1",
+      "equipment": [],
+      "steps": [
+        "Standing Wide-leg Forward Bend with Twist 2×45 с",
+        "Low Lunge with Isometric Adduction 2×45 с",
+        "Downward Dog to Cobra 2×45 с",
+        "Extended Side Angle 2×45 с",
+        "90-90 Hip Switch 2×45 с",
+        "Squat Open-arm Twist 2×45 с"
+      ],
+      "garmin_title": "План для тренування рухливості нижньої частини тіла"
+    },
+    "BBtOgBe": {
+      "name": "Master Core Control (Garmin Pilates)",
+      "sport": "pilates",
+      "minutes": 10,
+      "url": "https://connect.garmin.com/app/provider-workout/BBtOgBe?browse=1",
+      "equipment": [],
+      "steps": [
+        "Roll Down 30 с",
+        "Arm Circles 30 с",
+        "Roll Up 60 с",
+        "The Hundred 60 с",
+        "Single Leg Stretch 45 с",
+        "Double Leg Stretch 45 с",
+        "Criss Cross 45 с",
+        "Cobra 30 с",
+        "Swan 30 с",
+        "Swimming 45 с",
+        "Child's 20 с",
+        "Plank with Arm Variations 30 с",
+        "Plank with Leg Lift 30 с",
+        "Child's 20 с",
+        "Bridge 45 с",
+        "Piriformis Stretch 60 с"
+      ],
+      "garmin_title": "Master Core Control"
+    }
+  }
+}

@@ -1,0 +1,459 @@
+{
+  "format": "mygarmin-block-v1",
+  "id": "bridge3",
+  "title": "Тиждень 3 (з четверга) · перехід на обладнання залу",
+  "weeks": [
+    3
+  ],
+  "schedule_note": "Пн–Пт: ранок і вечір — довгі заняття, обід — до 30 хв. Субота — лише після обіду. Неділя — весь день.",
+  "why": "Нове обладнання залу: решту тижня перероблено. Вт — сила A (було), чт — сила B з тягою сидячи, гіперекстензією й лавою Скотта, пт — легка аеробна база, сб — сила C з першим човниковим бігом, нд — довге аеробне й довга розтяжка.",
+  "rationale": [],
+  "days": [
+    {
+      "dow": 4,
+      "slot": "PM",
+      "key": "B",
+      "type": "strength",
+      "sport": "strength",
+      "title": "Сила B · одна нога, бруси, тяга (нове обладнання)",
+      "blocks": [
+        {
+          "kind": "warmup",
+          "title": "Розминка",
+          "format": "sequence",
+          "rounds": 1,
+          "items": [
+            {
+              "ex": "knee_hugs",
+              "seconds": 60
+            },
+            {
+              "ex": "cat_cow_w",
+              "seconds": 45
+            },
+            {
+              "ex": "shoulder_circles",
+              "seconds": 30
+            },
+            {
+              "ex": "ankle_circles",
+              "seconds": 20
+            },
+            {
+              "ex": "squat_bw",
+              "reps": 10
+            },
+            {
+              "ex": "pushup_incline",
+              "reps": 8
+            }
+          ]
+        },
+        {
+          "kind": "main",
+          "title": "Бруси + вис",
+          "format": "circuit",
+          "rounds": [
+            3
+          ],
+          "transition": 45,
+          "rest": 60,
+          "items": [
+            {
+              "ex": "dip_neg",
+              "reps": 3
+            },
+            {
+              "ex": "hanging_knee_raise",
+              "reps": 6
+            }
+          ]
+        },
+        {
+          "kind": "main",
+          "title": "Коло 1 · випад / тяга / плечі",
+          "format": "circuit",
+          "rounds": [
+            2
+          ],
+          "transition": 15,
+          "rest": 90,
+          "items": [
+            {
+              "ex": "rev_lunge_offset",
+              "reps": 8,
+              "kg": 12.5
+            },
+            {
+              "ex": "cable_row",
+              "reps": 10,
+              "kg": 30
+            },
+            {
+              "ex": "pike_pushup",
+              "reps": 5
+            }
+          ]
+        },
+        {
+          "kind": "main",
+          "title": "Коло 2 · спина, корпус проти скручування, руки",
+          "format": "circuit",
+          "rounds": [
+            2
+          ],
+          "transition": 15,
+          "rest": 45,
+          "items": [
+            {
+              "ex": "back_ext",
+              "reps": 10
+            },
+            {
+              "ex": "plank_arm_raise",
+              "reps": 6
+            },
+            {
+              "ex": "preacher_curl",
+              "reps": 10,
+              "kg": 12.5,
+              "note": "Вага — EZ-гриф разом із дисками. Якщо гриф важчий, запиши фактичну."
+            }
+          ]
+        },
+        {
+          "kind": "cooldown",
+          "title": "Заминка",
+          "format": "sequence",
+          "rounds": 1,
+          "items": [
+            {
+              "ex": "s_hamstring",
+              "seconds": 30
+            },
+            {
+              "ex": "s_chest",
+              "seconds": 30
+            },
+            {
+              "ex": "s_piriformis",
+              "seconds": 30
+            },
+            {
+              "ex": "s_childs",
+              "seconds": 45
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "dow": 5,
+      "slot": "AM",
+      "key": "M3",
+      "type": "native",
+      "sport": "mobility",
+      "native": "GG67ef4",
+      "optional": true,
+      "title": "Ранок · рухливість нижньої частини тіла",
+      "fold": "Пропустив? Додай до вечірньої розминки 2×45 с перемикання 90/90."
+    },
+    {
+      "dow": 5,
+      "slot": "PM",
+      "key": "E",
+      "type": "cardio",
+      "sport": "cardio",
+      "activity": "elliptical",
+      "title": "Орбітрек · аеробна база",
+      "phases": [
+        {
+          "phase": "warmup",
+          "minutes": 4,
+          "text": "Легко, найменший комфортний опір."
+        },
+        {
+          "phase": "steady",
+          "minutes": [
+            22
+          ],
+          "progress": true,
+          "text": "Розмовний темп: можеш говорити повними реченнями."
+        },
+        {
+          "phase": "cooldown",
+          "minutes": 4,
+          "text": "Дуже легко, поступово сповільнюйся."
+        }
+      ]
+    },
+    {
+      "dow": 6,
+      "slot": "PM",
+      "key": "C",
+      "type": "strength",
+      "sport": "strength",
+      "title": "Сила C · спритність, потужність, координація",
+      "blocks": [
+        {
+          "kind": "warmup",
+          "title": "Розминка",
+          "format": "sequence",
+          "rounds": 1,
+          "items": [
+            {
+              "ex": "high_knees",
+              "seconds": 60
+            },
+            {
+              "ex": "ankle_circles",
+              "seconds": 20
+            },
+            {
+              "ex": "stretch_side_lunge",
+              "seconds": 20
+            },
+            {
+              "ex": "squat_bw",
+              "reps": 10
+            },
+            {
+              "ex": "pushup_incline",
+              "reps": 8
+            }
+          ]
+        },
+        {
+          "kind": "main",
+          "title": "Човниковий біг · розгін, гальмування, розворот",
+          "format": "circuit",
+          "rounds": [
+            3
+          ],
+          "transition": 0,
+          "rest": 45,
+          "items": [
+            {
+              "ex": "shuttle",
+              "reps": 4,
+              "note": "Ходьбою назад до старту — це і є відпочинок."
+            }
+          ]
+        },
+        {
+          "kind": "main",
+          "title": "Підтягування + стрибок на куб",
+          "format": "circuit",
+          "rounds": [
+            3
+          ],
+          "transition": 30,
+          "rest": 60,
+          "items": [
+            {
+              "ex": "pullup_neg",
+              "reps": 3
+            },
+            {
+              "ex": "box_jump",
+              "reps": 3,
+              "note": "Униз з куба — кроком. Найнижча сторона куба."
+            }
+          ]
+        },
+        {
+          "kind": "main",
+          "title": "Атлетичне коло",
+          "format": "circuit",
+          "rounds": [
+            3
+          ],
+          "transition": 15,
+          "rest": 60,
+          "items": [
+            {
+              "ex": "lateral_hop",
+              "reps": 5
+            },
+            {
+              "ex": "side_lunge",
+              "reps": 8
+            },
+            {
+              "ex": "bear_crawl",
+              "seconds": 20
+            },
+            {
+              "ex": "pushup",
+              "reps": 8
+            }
+          ]
+        },
+        {
+          "kind": "main",
+          "title": "Одна нога",
+          "format": "circuit",
+          "rounds": [
+            2
+          ],
+          "transition": 15,
+          "rest": 45,
+          "items": [
+            {
+              "ex": "sl_rdl",
+              "reps": 8,
+              "kg": 12.5
+            },
+            {
+              "ex": "calf_sl",
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "kind": "cooldown",
+          "title": "Заминка",
+          "format": "sequence",
+          "rounds": 1,
+          "items": [
+            {
+              "ex": "s_calf",
+              "seconds": 30
+            },
+            {
+              "ex": "s_hip_flexor",
+              "seconds": 30
+            },
+            {
+              "ex": "s_butterfly",
+              "seconds": 45
+            },
+            {
+              "ex": "s_childs",
+              "seconds": 45
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "dow": 7,
+      "slot": "AM",
+      "key": "E3",
+      "type": "cardio",
+      "sport": "cardio",
+      "activity": "elliptical",
+      "title": "Довге аеробне заняття",
+      "phases": [
+        {
+          "phase": "warmup",
+          "minutes": 5,
+          "text": "Легко."
+        },
+        {
+          "phase": "steady",
+          "minutes": [
+            30
+          ],
+          "progress": true,
+          "text": "Розмовний темп. Замість орбітрека можна швидку прогулянку надворі того самого часу — тоді просто відміть заняття."
+        },
+        {
+          "phase": "cooldown",
+          "minutes": 5,
+          "text": "Дуже легко."
+        }
+      ]
+    },
+    {
+      "dow": 7,
+      "slot": "PM",
+      "key": "Y",
+      "type": "flex",
+      "sport": "yoga",
+      "title": "Довга розтяжка",
+      "blocks": [
+        {
+          "kind": "warmup",
+          "title": "Розминка",
+          "format": "sequence",
+          "rounds": 1,
+          "items": [
+            {
+              "ex": "y_cat_cow",
+              "seconds": 60
+            },
+            {
+              "ex": "y_side_stretch",
+              "seconds": 30
+            }
+          ]
+        },
+        {
+          "kind": "main",
+          "title": "Довгі утримання",
+          "format": "circuit",
+          "rounds": 2,
+          "transition": 10,
+          "rest": 20,
+          "items": [
+            {
+              "ex": "y_low_lunge",
+              "seconds": 60
+            },
+            {
+              "ex": "y_hamstring",
+              "seconds": 60
+            },
+            {
+              "ex": "y_piriformis",
+              "seconds": 60
+            },
+            {
+              "ex": "y_wide_side_lunge",
+              "seconds": 40
+            },
+            {
+              "ex": "y_bound_angle",
+              "seconds": 60
+            },
+            {
+              "ex": "y_supine_twist",
+              "seconds": 45
+            }
+          ]
+        },
+        {
+          "kind": "main",
+          "title": "Баланс",
+          "format": "circuit",
+          "rounds": 2,
+          "transition": 10,
+          "rest": 20,
+          "items": [
+            {
+              "ex": "y_tree",
+              "seconds": 40
+            },
+            {
+              "ex": "y_warrior3",
+              "seconds": 25
+            }
+          ]
+        },
+        {
+          "kind": "cooldown",
+          "title": "Заминка",
+          "format": "sequence",
+          "rounds": 1,
+          "items": [
+            {
+              "ex": "y_childs",
+              "seconds": 90
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

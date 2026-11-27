@@ -1,0 +1,61 @@
+{
+  "name": "Мій тренер · MyGarmin",
+  "short_name": "Мій тренер",
+  "lang": "uk",
+  "start_url": "./#today",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f4f1ea",
+  "theme_color": "#123329",
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Аркуш сьогоднішнього заняття",
+      "short_name": "Аркуш на сьогодні",
+      "url": "./#sheet/today",
+      "icons": [
+        {
+          "src": "icons/sc-sheet.png",
+          "sizes": "96x96",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "Відмітити сьогоднішнє заняття",
+      "short_name": "Відмітити заняття",
+      "url": "./#s/today",
+      "icons": [
+        {
+          "src": "icons/sc-log.png",
+          "sizes": "96x96",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "Прогрес",
+      "short_name": "Прогрес",
+      "url": "./#progress",
+      "icons": [
+        {
+          "src": "icons/sc-progress.png",
+          "sizes": "96x96",
+          "type": "image/png"
+        }
+      ]
+    }
+  ]
+}

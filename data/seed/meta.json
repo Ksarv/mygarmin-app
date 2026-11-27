@@ -1,0 +1,7 @@
+{
+  "format": "mygarmin-meta-v1",
+  "cycle_start": "2026-11-09",
+  "block": "block2b",
+  "block_from_week": 4,
+  "note": "Нумерація тижнів не скидається: тиждень 1 почався 09.11.2026."
+}

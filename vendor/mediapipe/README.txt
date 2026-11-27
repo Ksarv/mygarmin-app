@@ -1,0 +1,1 @@
+MediaPipe Tasks Vision 0.10.14 (Apache-2.0) and Pose Landmarker (full, float16) from https://storage.googleapis.com/mediapipe-models/pose_landmarker/pose_landmarker_full/float16/1/pose_landmarker_full.task
